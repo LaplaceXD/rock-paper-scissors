@@ -1,4 +1,73 @@
-@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+.scoreboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 4px #606e85 solid;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 90%;
+  margin: 2rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scoreboard__title {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 0.75;
+  text-transform: uppercase;
+}
+
+.scoreboard__card {
+  background-color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreboard__card P {
+  text-transform: uppercase;
+  color: #2a46c0;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+.scoreboard__score {
+  color: #3b4363;
+  font-size: 3.5em;
+}
+
 * {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -14,6 +83,8 @@ html {
 }
 
 body {
-  background: radial-gradient(#1f3756, #141539);
+  background: radial-gradient(#141539, #1f3756);
+  font-weight: 600;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,45 @@
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    border: 4px $header-outline solid;
+    border-radius: 16px;
+    padding: 1rem;
+    width: 90%;
+    margin: 2rem auto;
+    justify-content: space-between;
+
+    &__title {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        color: white;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 0.75;
+        text-transform: uppercase;
+    }
+
+    &__card {
+        background-color: white;
+        padding: 0.6rem 2rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        P {
+            text-transform: uppercase;
+            color: $score-title;
+            font-size: 1em;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    &__score {
+        color: $dark-text;
+        font-size: 3.5em;
+    }
+}

@@ -1,4 +1,5 @@
 @import "./config";
+@import "./header";
 
 * {
     box-sizing: inherit;
@@ -17,5 +18,7 @@ body {
         map-get($background-colors, primary),
         map-get($background-colors, secondary)
     );
+    font-weight: 600;
+    font-family: $primary-font;
 }
 
