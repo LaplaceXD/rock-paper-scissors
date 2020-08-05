@@ -2,7 +2,7 @@
     position: relative;
     width: $triangle-size + 10vmax;
     margin: auto;
-    padding: 3rem 0 1rem 0;
+    padding: 3rem 0 0.5rem 0;
     max-width: 28em;
 
     &__img {
@@ -25,6 +25,8 @@
         @include box-size($triangle-size - 15vmax);
         @include max-box-size(12em);
         border-radius: 50%;
+        box-shadow: 0px $button-top-shadow darken(white, 15%);
+        cursor: pointer;
 
         &--paper {
             @include absolute-position(0, initial, initial, 0);
@@ -38,8 +40,9 @@
                 @extend .gameview__btn;
                 @include absolute-position(0, initial, initial, 0);
                 z-index: -1;
-                transform: scale(1.25);
+                transform: $border-button-size;
                 background: get-gradient($paper-colors);
+                box-shadow: -1px $button-bottom-shadow shade-button($paper-colors, 20%);
             }
         }
 
@@ -55,8 +58,9 @@
                 @extend .gameview__btn;
                 @include absolute-position(0, initial, initial, 0);
                 z-index: -1;
-                transform: scale(1.25);
+                transform: $border-button-size;
                 background: get-gradient($scissors-colors);
+                box-shadow: -1px $button-bottom-shadow shade-button($scissors-colors, 20%);
             }
         }
 
@@ -72,8 +76,10 @@
                 @extend .gameview__btn;
                 @include absolute-position(0, initial, initial, 0);
                 z-index: -1;
-                transform: scale(1.25);
+                transform: $border-button-size;
                 background: get-gradient($rock-colors);
+                box-shadow: -1px $button-bottom-shadow shade-button($rock-colors, 20%);
+
             }
         }
     }

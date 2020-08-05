@@ -1,0 +1,17 @@
+@media screen and (min-width: 1368px) { 
+    .gameview__btn {
+        box-shadow: 0px -8px darken(white, 15%);
+    }
+
+    .gameview__btn--paper::before {
+        box-shadow: -1px 12px shade-button($paper-colors, 20%);
+    }
+
+    .gameview__btn--scissors::before {
+        box-shadow: -1px 12px shade-button($scissors-colors, 20%);
+    }
+
+    .gameview__btn--rock::before {
+        box-shadow: -1px 12px shade-button($rock-colors, 20%);
+    }
+}
