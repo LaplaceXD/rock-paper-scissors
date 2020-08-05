@@ -1,0 +1,23 @@
+.after-screen {
+    visibility: hidden;
+    margin-top: -1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__status {
+        text-transform: uppercase;
+        color: white;
+        font-size: 3rem;
+    }
+
+    &__btn {
+        margin-top: 0.5em;
+        color: $score-title;
+        padding: 1em 3em;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+    }
+}

@@ -304,7 +304,7 @@ footer p a {
   position: fixed;
   bottom: 0;
   padding: 0.75em 2.25em;
-  margin-bottom: 2.5em;
+  margin-bottom: 3.5em;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   background: none;
@@ -350,5 +350,36 @@ footer p a {
 .rules.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.after-screen {
+  visibility: hidden;
+  margin-top: -1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.after-screen__status {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3rem;
+}
+
+.after-screen__btn {
+  margin-top: 0.5em;
+  color: #2a46c0;
+  padding: 1em 3em;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+
     p {
         font-size: 0.6rem;
         letter-spacing: 0.1em;
@@ -65,12 +65,12 @@ footer {
             text-transform: uppercase;
             color: lighten($score-title, 15%);
             text-decoration: none;
-        }    
+        }
     }
-    
 }
 
 @import "./header";
 @import "./gameview";
 @import "./responsive";
 @import "./rules";
+@import "./after-screen";
