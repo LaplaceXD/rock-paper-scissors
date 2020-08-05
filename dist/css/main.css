@@ -20,14 +20,69 @@ body {
 }
 
 main {
-  margin: 8vh auto;
+  margin: auto;
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 button {
+  font-family: "Barlow Semi Condensed", sans-serif;
   background-color: white;
   outline: none;
   border: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer p:first-child {
+  padding-left: 2em;
+}
+
+footer p:last-child {
+  padding-right: 2em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer p a {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #5c73db;
+  text-decoration: none;
 }
 
 .scoreboard {
@@ -242,5 +297,58 @@ button {
     -webkit-box-shadow: -1px 12px #9c1c33;
             box-shadow: -1px 12px #9c1c33;
   }
+}
+
+.btn--rules {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  padding: 0.75em 2.25em;
+  margin-bottom: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  background: none;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.rules h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.rules__close {
+  font-size: 2rem;
+  font-weight: 100;
+  color: gray;
+  cursor: pointer;
+}
+
+.rules.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 /*# sourceMappingURL=main.css.map */

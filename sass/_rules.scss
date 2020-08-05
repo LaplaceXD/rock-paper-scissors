@@ -1,0 +1,42 @@
+.btn--rules {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 0.75em 2.25em;
+    margin-bottom: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    background: none;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.rules {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(-100%);
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+    &__close {
+        font-size: 2rem;
+        font-weight: 100;
+        color: gray;
+        cursor: pointer;
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+}

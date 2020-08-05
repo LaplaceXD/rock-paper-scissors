@@ -42,7 +42,8 @@
                 z-index: -1;
                 transform: $border-button-size;
                 background: get-gradient($paper-colors);
-                box-shadow: -1px $button-bottom-shadow shade-button($paper-colors, 20%);
+                box-shadow: -1px $button-bottom-shadow
+                    shade-button($paper-colors, 20%);
             }
         }
 
@@ -60,7 +61,8 @@
                 z-index: -1;
                 transform: $border-button-size;
                 background: get-gradient($scissors-colors);
-                box-shadow: -1px $button-bottom-shadow shade-button($scissors-colors, 20%);
+                box-shadow: -1px $button-bottom-shadow
+                    shade-button($scissors-colors, 20%);
             }
         }
 
@@ -78,8 +80,8 @@
                 z-index: -1;
                 transform: $border-button-size;
                 background: get-gradient($rock-colors);
-                box-shadow: -1px $button-bottom-shadow shade-button($rock-colors, 20%);
-
+                box-shadow: -1px $button-bottom-shadow
+                    shade-button($rock-colors, 20%);
             }
         }
     }
