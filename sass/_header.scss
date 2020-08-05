@@ -2,28 +2,28 @@
     display: flex;
     flex-direction: row;
     border: 4px $header-outline solid;
-    border-radius: 16px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 0.75em;
     width: 90%;
-    margin: 2rem auto;
+    margin: 2em auto;
     justify-content: space-between;
 
     &__title {
-        margin: 1rem;
+        margin: 0.5em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         list-style: none;
         color: white;
         font-weight: 700;
-        font-size: 2em;
-        line-height: 0.75;
+        font-size: 1.5rem;
+        line-height: 0.8;
         text-transform: uppercase;
     }
 
     &__card {
         background-color: white;
-        padding: 0.6rem 2rem;
+        padding: 0.6em 1.5em;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
@@ -33,13 +33,13 @@
         P {
             text-transform: uppercase;
             color: $score-title;
-            font-size: 1em;
-            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            letter-spacing: 0.1rem;
         }
     }
 
     &__score {
         color: $dark-text;
-        font-size: 3.5em;
+        font-size: 2.5rem;
     }
 }

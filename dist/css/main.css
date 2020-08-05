@@ -8,17 +8,17 @@
       -ms-flex-direction: row;
           flex-direction: row;
   border: 4px #606e85 solid;
-  border-radius: 16px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 0.75em;
   width: 90%;
-  margin: 2rem auto;
+  margin: 2em auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .scoreboard__title {
-  margin: 1rem;
+  margin: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,14 +32,14 @@
   list-style: none;
   color: white;
   font-weight: 700;
-  font-size: 2em;
-  line-height: 0.75;
+  font-size: 1.5rem;
+  line-height: 0.8;
   text-transform: uppercase;
 }
 
 .scoreboard__card {
   background-color: white;
-  padding: 0.6rem 2rem;
+  padding: 0.6em 1.5em;
   border-radius: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,13 +59,13 @@
 .scoreboard__card P {
   text-transform: uppercase;
   color: #2a46c0;
-  font-size: 1em;
-  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
 }
 
 .scoreboard__score {
   color: #3b4363;
-  font-size: 3.5em;
+  font-size: 2.5rem;
 }
 
 * {
