@@ -4,6 +4,7 @@ $primary-font: "Barlow Semi Condensed", sans-serif;
 $dark-text: hsl(229, 25%, 31%);
 $score-title: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
+$triangle-size: 30vmax;
 
 $background-colors: (
     primary: hsl(237, 49%, 15%),
@@ -24,8 +25,31 @@ $paper-colors: (
 
 @function get-gradient($type) {
     @return linear-gradient(
-        right top,
+        45deg,
         map-get($type, primary),
         map-get($type, secondary)
     );
+}
+
+@mixin box-size($side-length) {
+    height: $side-length;
+    width: $side-length;
+}
+
+@mixin max-box-size($side-length) {
+    max-height: $side-length;
+    max-width: $side-length;
+}
+
+@mixin absolute-position(
+    $top: initial,
+    $right: initial,
+    $bottom: initial,
+    $left: initial
+) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
 }

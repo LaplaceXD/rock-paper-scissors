@@ -1,0 +1,67 @@
+.gameview {
+    position: relative;
+    width: $triangle-size + 10vmax;
+    margin: auto;
+    padding: 3rem 0;
+
+    &__img {
+        position: relative;
+        z-index: -2; // prevents transparentizing the borders
+        width: $triangle-size;
+        max-width: 20rem;
+        display: block;
+        margin: auto;
+    }
+
+    &__btns {
+        @include box-size(100%);
+        @include absolute-position(0, initial, initial, initial);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        @include box-size($triangle-size - 15vmax);
+        @include max-box-size(12em);
+        border-radius: 50%;
+
+        &--paper {
+            @include absolute-position(0, initial, initial, 0);
+
+            &::before {
+                content: "";
+                @extend .gameview__btn;
+                @include absolute-position(0, initial, initial, 0);
+                z-index: -1;
+                transform: scale(1.25);
+                background: get-gradient($paper-colors);
+            }
+        }
+
+        &--scissors {
+            @include absolute-position(0, 0, initial, initial);
+            
+            &::before {
+                content: "";
+                @extend .gameview__btn;
+                @include absolute-position(0, initial, initial, 0);
+                z-index: -1;
+                transform: scale(1.25);
+                background: get-gradient($scissors-colors);
+            }
+        }
+
+        &--rock {
+            @include absolute-position(initial, initial, 0, initial);
+            
+            &::before {
+                content: "";
+                @extend .gameview__btn;
+                @include absolute-position(0, initial, initial, 0);
+                z-index: -1;
+                transform: scale(1.25);
+                background: get-gradient($rock-colors);
+            }
+        }
+    }
+}
