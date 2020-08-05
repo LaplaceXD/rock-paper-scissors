@@ -45,6 +45,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 40em;
 }
 
 .scoreboard__title {
@@ -103,7 +104,7 @@ button {
   width: 40vmax;
   margin: auto;
   padding: 3rem 0 1rem 0;
-  max-width: calc(22em + 10vmax);
+  max-width: 28em;
 }
 
 .gameview__img {
@@ -147,6 +148,10 @@ button {
   bottom: initial;
 }
 
+.gameview__btn--paper img {
+  width: 40%;
+}
+
 .gameview__btn--paper::before {
   content: "";
   position: absolute;
@@ -168,6 +173,10 @@ button {
   bottom: initial;
 }
 
+.gameview__btn--scissors img {
+  width: 40%;
+}
+
 .gameview__btn--scissors::before {
   content: "";
   position: absolute;
@@ -187,6 +196,10 @@ button {
   left: initial;
   right: initial;
   bottom: 0;
+}
+
+.gameview__btn--rock img {
+  width: 40%;
 }
 
 .gameview__btn--rock::before {

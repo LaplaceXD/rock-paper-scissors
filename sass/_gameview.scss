@@ -3,7 +3,7 @@
     width: $triangle-size + 10vmax;
     margin: auto;
     padding: 3rem 0 1rem 0;
-    max-width: calc(22em + 10vmax);
+    max-width: 28em;
 
     &__img {
         position: relative;
@@ -29,6 +29,10 @@
         &--paper {
             @include absolute-position(0, initial, initial, 0);
 
+            img {
+                width: 40%;
+            }
+
             &::before {
                 content: "";
                 @extend .gameview__btn;
@@ -42,6 +46,10 @@
         &--scissors {
             @include absolute-position(0, 0, initial, initial);
 
+            img {
+                width: 40%;
+            }
+
             &::before {
                 content: "";
                 @extend .gameview__btn;
@@ -54,6 +62,10 @@
 
         &--rock {
             @include absolute-position(initial, initial, 0, initial);
+
+            img {
+                width: 40%;
+            }
 
             &::before {
                 content: "";
