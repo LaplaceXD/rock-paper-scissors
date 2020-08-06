@@ -382,7 +382,7 @@ footer p a {
 .round-over {
   position: fixed;
   bottom: 0;
-  margin-bottom: 8em;
+  margin-bottom: 9em;
   margin-top: -1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,12 +400,13 @@ footer p a {
   text-transform: uppercase;
   color: white;
   font-size: 3rem;
+  letter-spacing: 0.2rem;
 }
 
 .round-over__btn {
-  margin-top: 0.5em;
+  margin-top: 1em;
   color: #2a46c0;
-  padding: 1em 3em;
+  padding: 0.75em 3.5em;
   border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.1em;

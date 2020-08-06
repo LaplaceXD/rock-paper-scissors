@@ -1,7 +1,7 @@
 .round-over {
     position: fixed;
     bottom: 0;
-    margin-bottom: 8em;
+    margin-bottom: 9em;
     margin-top: -1em;
     display: flex;
     flex-direction: column;
@@ -11,12 +11,13 @@
         text-transform: uppercase;
         color: white;
         font-size: 3rem;
+        letter-spacing: 0.2rem;
     }
 
     &__btn {
-        margin-top: 0.5em;
+        margin-top: 1em;
         color: $score-title;
-        padding: 1em 3em;
+        padding: 0.75em 3.5em;
         border-radius: 8px;
         text-transform: uppercase;
         letter-spacing: 0.1em;
