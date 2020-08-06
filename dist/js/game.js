@@ -2,6 +2,24 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function Moves(name, winsAgainst, losesAgainst) {
+    let winsAgainstArray = winsAgainst;
+    let losesAgainstArray = losesAgainst;
+    choices.push(name);
+
+    this.addWinsAgainst = function (move) {
+        winsAgainstArray.push(move);
+    };
+
+    this.getWinsAgainst = function () {
+        return winsAgainstArray;
+    };
+
+    this.getLosesAgainst = function () {
+        return losesAgainstArray;
+    };
+}
+
 const gameBtns = document.querySelectorAll(".gameview__btn");
 
 const housePick = document.querySelector(".picks__house");
@@ -14,8 +32,11 @@ const paper = document.querySelector(".gameview__btn--paper");
 const rock = document.querySelector(".gameview__btn--rock");
 const scissors = document.querySelector(".gameview__btn--scissors");
 
-// ltr loses
-const choices = ["rock", "paper", "scissors"];
+const choices = [];
+const paperMove = new Moves("paper", ["rock"], ["scissors"]);
+const rockMove = new Moves("rock", ["scissors"], ["paper"]);
+const scissorsMove = new Moves("scissors", ["paper"], ["rock"]);
+
 let houseDataId = null;
 let playerDataId = null;
 
@@ -45,7 +66,7 @@ function getButtonCopy(move) {
     }
 }
 
-async function startMatch() {
+async function match() {
     houseDataId = Math.floor(Math.random() * (choices.length - 1));
     playerDataId = this.getAttribute("data-id");
 
@@ -61,5 +82,5 @@ async function startMatch() {
 }
 
 for (let i = 0; i < gameBtns.length; i++) {
-    gameBtns[i].addEventListener("click", startMatch);
+    gameBtns[i].addEventListener("click", match);
 }
