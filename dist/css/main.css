@@ -443,6 +443,9 @@ footer p a {
         -ms-flex-order: -1;
             order: -1;
   }
+  .after-screen {
+    margin-bottom: 15em;
+  }
   footer p {
     font-size: 0.7rem;
   }
