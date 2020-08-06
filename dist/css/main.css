@@ -346,7 +346,7 @@ footer p a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
-  max-width: 45em;
+  max-width: 50em;
   top: 0;
   margin-top: 28vh;
 }
@@ -535,7 +535,8 @@ footer p a {
     font-size: 2rem;
   }
   .scoreboard__card {
-    padding: 0.5em 3em;
+    padding: 0.5em 2em;
+    margin: 1em;
   }
   .scoreboard__card p {
     font-size: 1rem;
@@ -574,7 +575,23 @@ footer p a {
     margin-bottom: 1.5em;
   }
   .picks {
-    margin-top: 40vh;
+    margin-top: 30vh;
+  }
+  .picks__container:first-child {
+    margin-left: 4em;
+  }
+  .picks h1 {
+    font-size: 1.25rem;
+  }
+  .picks .btn--placeholder {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 0;
+    margin-top: 15em;
+  }
+  .round-over {
+    margin-bottom: 33vh;
   }
   .round-over__status {
     font-size: 3.5rem;
