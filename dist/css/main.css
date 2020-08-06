@@ -156,7 +156,6 @@ footer p a {
 }
 
 .gameview {
-  visibility: hidden;
   position: relative;
   width: 18em;
   margin: 3em auto;
@@ -338,15 +337,14 @@ footer p a {
 }
 
 .picks {
+  visibility: hidden;
+  display: none;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
-  max-width: 50em;
+  max-width: 42em;
   top: 0;
   margin-top: 28vh;
 }
@@ -391,13 +389,19 @@ footer p a {
   margin-bottom: 5em;
 }
 
-.round-over {
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 10em;
+.picks.active {
+  visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.round-over {
+  visibility: hidden;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -426,6 +430,13 @@ footer p a {
 
 .round-over__btn:hover {
   color: red;
+}
+
+.round-over.active {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width: 700px) {
@@ -576,6 +587,7 @@ footer p a {
   }
   .picks {
     margin-top: 30vh;
+    max-width: 50em;
   }
   .picks__container:first-child {
     margin-left: 4em;
