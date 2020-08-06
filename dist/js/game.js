@@ -40,6 +40,9 @@ const scissorsMove = new Moves("scissors", ["paper"], ["rock"]);
 let houseDataId = null;
 let playerDataId = null;
 
+const roundOver = document.querySelector(".round-over");
+const roundOverStatus = document.querySelector(".round-over__status");
+
 function loadDataIds() {
     paper.setAttribute("data-id", choices.indexOf("paper"));
     rock.setAttribute("data-id", choices.indexOf("rock"));
@@ -66,6 +69,47 @@ function getButtonCopy(move) {
     }
 }
 
+function compareMoves() {
+    function getMove(dataid) {
+        let move = choices[dataid];
+
+        switch (move) {
+            case "paper":
+                return paperMove;
+            case "rock":
+                return rockMove;
+            case "scissors":
+                return scissorsMove;
+        }
+    }
+
+    let playerLosesAgains = getMove(playerDataId).getLosesAgainst;
+
+    if (playerDataId == houseDataId) {
+        return "draw";
+    } else if (playerLosesAgains.includes(choices[houseDataId])) {
+        return "lose";
+    } else {
+        return "win";
+    }
+}
+
+function createDecision(status) {
+    switch (status) {
+        case "win":
+            roundOverStatus.textContent = "You Win";
+            break;
+        case "draw":
+            roundOverStatus.textContent = "draw";
+            break;
+        case "lose":
+            roundOverStatus.textContent = "You Lose";
+            break;
+    }
+
+    roundOver.classList.add("active");
+}
+
 async function match() {
     houseDataId = Math.floor(Math.random() * (choices.length - 1));
     playerDataId = this.getAttribute("data-id");
@@ -79,31 +123,9 @@ async function match() {
     await sleep(500);
     let houseMove = choices[houseDataId];
     housePick.appendChild(getButtonCopy(houseMove));
-}
 
-function getMove(dataid) {
-    let move = choices[dataid];
-
-    switch(move) {
-        case "paper":
-            return paperMove;
-        case "rock":
-            return rockMove;
-        case "scissors":
-            return scissorsMove;
-    }
-} 
-
-function compareMoves() {
-    let playerLosesAgains = getMove(playerDataId).getLosesAgainst;
-
-    if(playerDataId == houseDataId) {
-        return "draw";
-    } else if(playerLosesAgains.includes(choices[houseDataId])) {
-        return "lose";
-    } else {
-        return "win";
-    }
+    let status = compareMoves();
+    createDecision(status);
 }
 
 for (let i = 0; i < gameBtns.length; i++) {
