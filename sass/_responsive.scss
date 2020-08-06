@@ -72,6 +72,14 @@
             order: -1;
         }
     }
+
+    footer p {
+        font-size: 0.7rem;
+
+        a {
+            font-size: 0.8rem;
+        }
+    }
 }
 
 @include responsive-size(desktop) {

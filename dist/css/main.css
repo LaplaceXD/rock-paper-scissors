@@ -433,6 +433,12 @@ footer p a {
         -ms-flex-order: -1;
             order: -1;
   }
+  footer p {
+    font-size: 0.7rem;
+  }
+  footer p a {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 1368px) {
