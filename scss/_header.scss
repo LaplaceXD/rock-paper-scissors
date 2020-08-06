@@ -1,10 +1,10 @@
 .scoreboard {
     display: flex;
     flex-direction: row;
-    border: 4px $header-outline solid;
-    border-radius: 12px;
-    padding: 0.75em;
-    width: 90%;
+    border: 2px $header-outline solid;
+    border-radius: 8px;
+    padding: 0.5em;
+    width: 85%;
     margin: 2em auto;
     justify-content: space-between;
     max-width: 40em;
@@ -16,8 +16,8 @@
         justify-content: center;
         list-style: none;
         color: white;
-        font-weight: 700;
-        font-size: 1.5rem;
+        font-weight: 600;
+        font-size: 1.25rem;
         line-height: 0.8;
         text-transform: uppercase;
     }
