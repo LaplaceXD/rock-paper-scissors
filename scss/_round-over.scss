@@ -22,14 +22,14 @@
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-size: 1rem;
-        
+
         &:hover {
             color: red;
         }
     }
 
     &.active {
-        visibility: hidden;
+        visibility: visible;
         display: flex;
     }
 }

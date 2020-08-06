@@ -448,7 +448,7 @@ footer p a {
 }
 
 .round-over.active {
-  visibility: hidden;
+  visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

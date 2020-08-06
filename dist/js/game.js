@@ -3,8 +3,8 @@ function sleep(ms) {
 }
 
 function Moves(name, winsAgainst, losesAgainst) {
-    let winsAgainstArray = winsAgainst;
-    let losesAgainstArray = losesAgainst;
+    let winsAgainstArray = [...winsAgainst];
+    let losesAgainstArray = [...losesAgainst];
     choices.push(name);
 
     this.addWinsAgainst = function (move) {
@@ -83,11 +83,11 @@ function compareMoves() {
         }
     }
 
-    let playerLosesAgains = getMove(playerDataId).getLosesAgainst;
+    let playerLosesAgainst = getMove(playerDataId).getLosesAgainst;
 
     if (playerDataId == houseDataId) {
         return "draw";
-    } else if (playerLosesAgains.includes(choices[houseDataId])) {
+    } else if (playerLosesAgainst.includes(choices[houseDataId])) {
         return "lose";
     } else {
         return "win";
