@@ -1,0 +1,32 @@
+.picks {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    top: 0;
+    margin-top: 30vh;
+
+    &__container {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        letter-spacing: 0.25em;
+        padding:1em;
+    }
+
+    h1 {
+        font-weight: 600;
+    }
+
+    .btn--placeholder {
+        @extend .gameview__btn;
+        box-shadow: none;
+        background-color: $dark-text;
+        opacity: 0.5;
+        margin-bottom: 3em;
+    }
+}

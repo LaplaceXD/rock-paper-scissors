@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: radial-gradient(#141539, #1f3756);
+  background: radial-gradient(#1f3756, #141539) no-repeat fixed;
   font-weight: 600;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
@@ -156,6 +156,7 @@ footer p a {
 }
 
 .gameview {
+  visibility: hidden;
   position: relative;
   width: 18em;
   margin: 3em auto;
@@ -186,7 +187,7 @@ footer p a {
           justify-content: center;
 }
 
-.gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before {
+.gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before, .picks .btn--placeholder {
   height: 8em;
   width: 8em;
   border-radius: 50%;
@@ -334,6 +335,50 @@ footer p a {
           transform: translateY(0);
 }
 
+.picks {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  top: 0;
+  margin-top: 30vh;
+}
+
+.picks__container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  padding: 1em;
+}
+
+.picks h1 {
+  font-weight: 600;
+}
+
+.picks .btn--placeholder {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #3b4363;
+  opacity: 0.5;
+  margin-bottom: 3em;
+}
+
 .round-over {
   position: fixed;
   bottom: 0;
@@ -389,7 +434,7 @@ footer p a {
   .gameview__connector {
     width: 14em;
   }
-  .gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before {
+  .gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before, .picks .btn--placeholder {
     height: 9em;
     width: 9em;
     -webkit-box-shadow: 0px -6px #d9d9d9;
@@ -462,7 +507,7 @@ footer p a {
   .gameview__connector {
     width: 20em;
   }
-  .gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before {
+  .gameview__btn, .gameview__btn--paper::before, .gameview__btn--scissors::before, .gameview__btn--rock::before, .picks .btn--placeholder {
     height: 11em;
     width: 11em;
     -webkit-box-shadow: 0px -8px #d9d9d9;
@@ -498,21 +543,21 @@ footer p a {
             flex-direction: column;
     padding-bottom: 1em;
   }
-  footer P {
+  footer p {
     font-size: 1rem;
   }
-  footer P:first-child {
+  footer p:first-child {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  footer P:last-child {
+  footer p:last-child {
     padding-left: 2em;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  footer P a {
+  footer p a {
     font-size: 1.2rem;
   }
 }

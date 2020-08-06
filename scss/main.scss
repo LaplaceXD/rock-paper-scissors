@@ -16,7 +16,7 @@ body {
     background: radial-gradient(
         map-get($background-colors, primary),
         map-get($background-colors, secondary)
-    );
+    ) no-repeat fixed;
     font-weight: 600;
     font-family: $primary-font;
 }
