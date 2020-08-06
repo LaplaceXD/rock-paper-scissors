@@ -4,7 +4,7 @@
     justify-content: center;
     width: 90%;
     top: 0;
-    margin-top: 30vh;
+    margin-top: 28vh;
 
     &__container {
         width: 50%;
@@ -15,7 +15,7 @@
         text-transform: uppercase;
         font-size: 0.6rem;
         letter-spacing: 0.25em;
-        padding:1em;
+        padding: 1em;
     }
 
     h1 {
@@ -24,9 +24,13 @@
 
     .btn--placeholder {
         @extend .gameview__btn;
+        @include box-size(11em);
+        z-index: -1;
+        position: relative;
+        display: flex;
+        justify-content: center;
         box-shadow: none;
-        background-color: $dark-text;
-        opacity: 0.5;
-        margin-bottom: 3em;
+        background-color: rgba(darken($dark-text, 20), 0.3);
+        margin-bottom: 5em;
     }
 }

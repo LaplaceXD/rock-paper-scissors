@@ -347,7 +347,7 @@ footer p a {
           justify-content: center;
   width: 90%;
   top: 0;
-  margin-top: 30vh;
+  margin-top: 28vh;
 }
 
 .picks__container {
@@ -374,11 +374,20 @@ footer p a {
 }
 
 .picks .btn--placeholder {
+  height: 11em;
+  width: 11em;
+  z-index: -1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #3b4363;
-  opacity: 0.5;
-  margin-bottom: 3em;
+  background-color: rgba(21, 24, 35, 0.3);
+  margin-bottom: 5em;
 }
 
 .round-over {
