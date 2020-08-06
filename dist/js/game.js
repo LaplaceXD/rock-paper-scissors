@@ -20,6 +20,10 @@ function Moves(name, winsAgainst, losesAgainst) {
     };
 }
 
+let score = 0;
+const scoreDisplay = document.querySelector(".scoreboard__score");
+scoreDisplay.textContent = score;
+
 const gameBtns = document.querySelectorAll(".gameview__btn");
 
 const housePick = document.querySelector(".picks__house");
@@ -70,6 +74,8 @@ function getButtonCopy(move) {
 }
 
 function compareMoves() {
+    let playerLosesAgainst = getMove(playerDataId).getLosesAgainst;
+
     function getMove(dataid) {
         let move = choices[dataid];
 
@@ -83,8 +89,6 @@ function compareMoves() {
         }
     }
 
-    let playerLosesAgainst = getMove(playerDataId).getLosesAgainst;
-
     if (playerDataId == houseDataId) {
         return "draw";
     } else if (playerLosesAgainst.includes(choices[houseDataId])) {
@@ -97,12 +101,14 @@ function compareMoves() {
 function createDecision(status) {
     switch (status) {
         case "win":
+            score++;
             roundOverStatus.textContent = "You Win";
             break;
         case "draw":
             roundOverStatus.textContent = "draw";
             break;
         case "lose":
+            score--;
             roundOverStatus.textContent = "You Lose";
             break;
     }
@@ -125,6 +131,7 @@ async function match() {
     housePick.appendChild(getButtonCopy(houseMove));
 
     let status = compareMoves();
+    await sleep(500);
     createDecision(status);
 }
 
