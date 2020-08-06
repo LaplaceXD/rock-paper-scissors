@@ -76,6 +76,24 @@
         }
     }
 
+    .picks {
+        margin-top: 35vh;
+        justify-content: space-between;
+
+        &__container {
+            width: auto;
+
+            &:first-child {
+                margin-left: 2.5em;
+            }
+        }
+
+        .btn--placeholder {
+            @include box-size(12.5em);
+            box-shadow: none;
+        }
+    }
+
     .round-over {
         margin-bottom: 40vh;
     }

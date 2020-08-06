@@ -346,6 +346,7 @@ footer p a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
+  max-width: 40em;
   top: 0;
   margin-top: 28vh;
 }
@@ -498,6 +499,24 @@ footer p a {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .picks {
+    margin-top: 35vh;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .picks__container {
+    width: auto;
+  }
+  .picks__container:first-child {
+    margin-left: 2.5em;
+  }
+  .picks .btn--placeholder {
+    height: 12.5em;
+    width: 12.5em;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .round-over {
     margin-bottom: 40vh;
