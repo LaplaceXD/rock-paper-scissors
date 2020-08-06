@@ -81,6 +81,31 @@ async function match() {
     housePick.appendChild(getButtonCopy(houseMove));
 }
 
+function getMove(dataid) {
+    let move = choices[dataid];
+
+    switch(move) {
+        case "paper":
+            return paperMove;
+        case "rock":
+            return rockMove;
+        case "scissors":
+            return scissorsMove;
+    }
+} 
+
+function compareMoves() {
+    let playerLosesAgains = getMove(playerDataId).getLosesAgainst;
+
+    if(playerDataId == houseDataId) {
+        return "draw";
+    } else if(playerLosesAgains.includes(choices[houseDataId])) {
+        return "lose";
+    } else {
+        return "win";
+    }
+}
+
 for (let i = 0; i < gameBtns.length; i++) {
     gameBtns[i].addEventListener("click", match);
 }
