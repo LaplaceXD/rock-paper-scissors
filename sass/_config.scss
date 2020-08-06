@@ -4,8 +4,6 @@ $primary-font: "Barlow Semi Condensed", sans-serif;
 $dark-text: hsl(229, 25%, 31%);
 $score-title: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
-
-$triangle-size: 30vmax;
 $border-button-size: scale(1.3);
 
 $background-colors: (
@@ -42,11 +40,6 @@ $paper-colors: (
     width: $side-length;
 }
 
-@mixin max-box-size($side-length) {
-    max-height: $side-length;
-    max-width: $side-length;
-}
-
 @mixin absolute-position($top, $right, $bottom, $left) {
     position: absolute;
     top: $top;
@@ -57,11 +50,10 @@ $paper-colors: (
 
 @mixin responsive-size($screen-width) {
     @if $screen-width == tablet {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 700px) {
             @content;
         }
-    }
-    @else if $screen-width == desktop {
+    } @else if $screen-width == desktop {
         @media screen and(min-width: 1368px) {
             @content;
         }
