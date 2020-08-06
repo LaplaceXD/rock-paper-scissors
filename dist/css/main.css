@@ -407,27 +407,31 @@ footer p a {
     margin-bottom: 2.5em;
   }
   .rules {
-    width: 24em;
-    height: 15em;
-    top: 35vh;
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    width: 18em;
+    height: 18em;
+    -webkit-transform: translateY(-175%);
+            transform: translateY(-175%);
+    top: 30vh;
     border-radius: 16px;
     -webkit-box-shadow: 2px 4px 8px black;
             box-shadow: 2px 4px 8px black;
   }
   .rules h1 {
     font-size: 1.5rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 1em;
   }
   .rules img {
-    width: 13em;
+    width: 14em;
     padding-bottom: 1em;
   }
   .rules__close {
     top: 0;
     right: 0;
     position: absolute;
-    font-size: 1.3rem;
+    font-size: 2rem;
+    margin-top: 0.1em;
     margin-right: 0.5em;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;

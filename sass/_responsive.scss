@@ -47,19 +47,21 @@
     }
 
     .rules {
-        width: 24em;
-        height: 15em;
-        top: 35vh;
-        transform: translateY(-200%);
+        width: 18em;
+        height: 18em;
+        transform: translateY(-175%);
+        top: 30vh;
         border-radius: 16px;
         box-shadow: 2px 4px 8px black;
        
         h1 {
-            font-size: 1.5rem;     
+            font-size: 1.5rem;
+            align-self: flex-start;
+            margin-left: 1em;     
         }
 
         img {
-            width: 13em;
+            width: 14em;
             padding-bottom: 1em;
         }
 
@@ -67,7 +69,8 @@
             top: 0;
             right: 0;
             position: absolute;
-            font-size: 1.3rem;
+            font-size: 2rem;
+            margin-top: 0.1em;
             margin-right: 0.5em;
             order: -1;
         }
