@@ -3,26 +3,14 @@ function sleep(ms) {
 }
 
 function Moves(name, winsAgainst, losesAgainst) {
-    let winsAgainstArray = [...winsAgainst];
-    let losesAgainstArray = [...losesAgainst];
+    this.name = name;
+    this.winsAgainst = [...winsAgainst];
+    this.losesAgainst = [...losesAgainst];
     choices.push(name);
-
-    this.addWinsAgainst = function (move) {
-        winsAgainstArray.push(move);
-    };
-
-    this.getWinsAgainst = function () {
-        return winsAgainstArray;
-    };
-
-    this.getLosesAgainst = function () {
-        return losesAgainstArray;
-    };
 }
 
 let score = 0;
 const scoreDisplay = document.querySelector(".scoreboard__score");
-scoreDisplay.textContent = score;
 
 const gameBtns = document.querySelectorAll(".gameview__btn");
 
@@ -40,6 +28,7 @@ const choices = [];
 const paperMove = new Moves("paper", ["rock"], ["scissors"]);
 const rockMove = new Moves("rock", ["scissors"], ["paper"]);
 const scissorsMove = new Moves("scissors", ["paper"], ["rock"]);
+console.log(rockMove);
 
 let houseDataId = null;
 let playerDataId = null;
@@ -48,6 +37,8 @@ const roundOver = document.querySelector(".round-over");
 const roundOverStatus = document.querySelector(".round-over__status");
 
 function loadDataIds() {
+    scoreDisplay.textContent = score;
+
     paper.setAttribute("data-id", choices.indexOf("paper"));
     rock.setAttribute("data-id", choices.indexOf("rock"));
     scissors.setAttribute("data-id", choices.indexOf("scissors"));
@@ -74,8 +65,6 @@ function getButtonCopy(move) {
 }
 
 function compareMoves() {
-    let playerLosesAgainst = getMove(playerDataId).getLosesAgainst;
-
     function getMove(dataid) {
         let move = choices[dataid];
 
@@ -89,13 +78,17 @@ function compareMoves() {
         }
     }
 
+    let playerLosesAgainst = getMove(playerDataId).losesAgainst;
+
     if (playerDataId == houseDataId) {
         return "draw";
-    } else if (playerLosesAgainst.includes(choices[houseDataId])) {
-        return "lose";
-    } else {
-        return "win";
     }
+
+    for (let losingMove of playerLosesAgainst) {
+        if (losingMove == choices[houseDataId]) return "lose";
+    }
+
+    return "win";
 }
 
 function createDecision(status) {
@@ -113,6 +106,7 @@ function createDecision(status) {
             break;
     }
 
+    scoreDisplay.textContent = score;
     roundOver.classList.add("active");
 }
 
