@@ -485,6 +485,12 @@ footer p a {
     margin-right: 1.5em;
     margin-bottom: 1.5em;
   }
+  .after-screen__status {
+    font-size: 3.5rem;
+  }
+  .after-screen__btn {
+    padding: 1em 4em;
+  }
   footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

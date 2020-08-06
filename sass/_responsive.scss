@@ -53,11 +53,11 @@
         top: 30vh;
         border-radius: 16px;
         box-shadow: 2px 4px 8px black;
-       
+
         h1 {
             font-size: 1.5rem;
             align-self: flex-start;
-            margin-left: 1em;     
+            margin-left: 1em;
         }
 
         img {
@@ -83,7 +83,7 @@
     footer p {
         font-size: 0.7rem;
 
-            a {
+        a {
             font-size: 0.8rem;
         }
     }
@@ -123,12 +123,19 @@
     }
 
     .after-screen {
+        &__status {
+            font-size: 3.5rem;
+        }
+
+        &__btn {
+            padding: 1em 4em;
+        }
     }
 
     footer {
         flex-direction: column;
         padding-bottom: 1em;
-        
+
         P {
             font-size: 1rem;
 
