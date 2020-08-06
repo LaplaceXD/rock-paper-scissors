@@ -310,9 +310,14 @@ footer p a {
       justify-content: space-around;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 500ms 0ms ease;
+  transition: -webkit-transform 500ms 0ms ease;
+  transition: transform 500ms 0ms ease;
+  transition: transform 500ms 0ms ease, -webkit-transform 500ms 0ms ease;
 }
 
 .rules h1 {
+  color: #3b4363;
   text-transform: uppercase;
   font-size: 2.5rem;
 }
@@ -395,6 +400,38 @@ footer p a {
   .gameview__btn--rock::before {
     -webkit-box-shadow: -1px 8px #9c1c33;
             box-shadow: -1px 8px #9c1c33;
+  }
+  .btn--rules {
+    font-size: 1rem;
+    padding: 0.75em 3em;
+    margin-bottom: 2.5em;
+  }
+  .rules {
+    width: 24em;
+    height: 15em;
+    top: 35vh;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    border-radius: 16px;
+    -webkit-box-shadow: 2px 4px 8px black;
+            box-shadow: 2px 4px 8px black;
+  }
+  .rules h1 {
+    font-size: 1.5rem;
+  }
+  .rules img {
+    width: 13em;
+    padding-bottom: 1em;
+  }
+  .rules__close {
+    top: 0;
+    right: 0;
+    position: absolute;
+    font-size: 1.3rem;
+    margin-right: 0.5em;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 

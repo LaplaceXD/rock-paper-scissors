@@ -23,8 +23,10 @@
     align-items: center;
     justify-content: space-around;
     transform: translateY(-100%);
+    @include transition-ease(transform);
 
     h1 {
+        color: $dark-text;
         text-transform: uppercase;
         font-size: 2.5rem;
     }

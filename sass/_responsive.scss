@@ -12,7 +12,6 @@
             margin-top: -0.15em;
             font-size: 3rem;
         }
-
     }
 
     .gameview {
@@ -38,6 +37,39 @@
             &--rock::before {
                 box-shadow: -1px 8px shade-button($rock-colors, 20%);
             }
+        }
+    }
+
+    .btn--rules {
+        font-size: 1rem;
+        padding: 0.75em 3em;
+        margin-bottom: 2.5em;
+    }
+
+    .rules {
+        width: 24em;
+        height: 15em;
+        top: 35vh;
+        transform: translateY(-200%);
+        border-radius: 16px;
+        box-shadow: 2px 4px 8px black;
+       
+        h1 {
+            font-size: 1.5rem;     
+        }
+
+        img {
+            width: 13em;
+            padding-bottom: 1em;
+        }
+
+        &__close {
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 1.3rem;
+            margin-right: 0.5em;
+            order: -1;
         }
     }
 }
