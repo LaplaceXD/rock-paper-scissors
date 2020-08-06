@@ -94,7 +94,7 @@ footer p a {
       -ms-flex-direction: row;
           flex-direction: row;
   border: 2px #606e85 solid;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 0.5em;
   width: 85%;
   margin: 2em auto;
@@ -541,6 +541,9 @@ footer p a {
 }
 
 @media screen and (min-width: 1368px) {
+  .scoreboard {
+    border-radius: 16px;
+  }
   .scoreboard__title {
     padding: 0.2em;
     font-size: 2rem;

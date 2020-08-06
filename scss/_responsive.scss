@@ -109,6 +109,8 @@
 
 @include responsive-size(desktop) {
     .scoreboard {
+        border-radius: 16px;
+        
         &__title {
             padding: 0.2em;
             font-size: 2rem;
