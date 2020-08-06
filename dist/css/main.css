@@ -290,6 +290,15 @@ footer p a {
   border: 1px solid white;
   border-radius: 8px;
   z-index: 2;
+  -webkit-transition: color 500ms 0ms ease;
+  transition: color 500ms 0ms ease;
+  -webkit-transition: background-color 500ms 0ms ease;
+  transition: background-color 500ms 0ms ease;
+}
+
+.btn--rules:hover {
+  color: #2a46c0;
+  background-color: white;
 }
 
 .rules {

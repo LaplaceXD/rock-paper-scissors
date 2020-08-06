@@ -12,6 +12,13 @@
     border: 1px solid white;
     border-radius: 8px;
     z-index: 2;
+    @include transition-ease(color);
+    @include transition-ease(background-color);
+
+    &:hover {
+        color: $score-title;
+        background-color: white;
+    }
 }
 
 .rules {
