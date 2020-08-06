@@ -334,7 +334,7 @@ footer p a {
           transform: translateY(0);
 }
 
-.after-screen {
+.round-over {
   position: fixed;
   bottom: 0;
   margin-bottom: 8em;
@@ -351,13 +351,13 @@ footer p a {
           align-items: center;
 }
 
-.after-screen__status {
+.round-over__status {
   text-transform: uppercase;
   color: white;
   font-size: 3rem;
 }
 
-.after-screen__btn {
+.round-over__btn {
   margin-top: 0.5em;
   color: #2a46c0;
   padding: 1em 3em;
@@ -367,7 +367,7 @@ footer p a {
   font-size: 1rem;
 }
 
-.after-screen__btn:hover {
+.round-over__btn:hover {
   color: red;
 }
 
@@ -415,8 +415,8 @@ footer p a {
   .rules {
     width: 18em;
     height: 18em;
-    -webkit-transform: translateY(-175%);
-            transform: translateY(-175%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
     top: 30vh;
     border-radius: 16px;
     -webkit-box-shadow: 2px 4px 8px black;
@@ -443,7 +443,7 @@ footer p a {
         -ms-flex-order: -1;
             order: -1;
   }
-  .after-screen {
+  .round-over {
     margin-bottom: 40vh;
   }
   footer p {
@@ -485,10 +485,10 @@ footer p a {
     margin-right: 1.5em;
     margin-bottom: 1.5em;
   }
-  .after-screen__status {
+  .round-over__status {
     font-size: 3.5rem;
   }
-  .after-screen__btn {
+  .round-over__btn {
     padding: 1em 4em;
   }
   footer {
