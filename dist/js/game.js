@@ -27,7 +27,7 @@ function loadDataIds() {
 
 document.addEventListener("DOMContentLoaded", loadDataIds);
 
-const getButtonCopy = function (move) {
+function getButtonCopy(move) {
     function createButtonCopy(orignal) {
         let button = document.createElement("button");
         button.className = `${orignal.className}`;
@@ -43,7 +43,7 @@ const getButtonCopy = function (move) {
         case "scissors":
             return createButtonCopy(scissors);
     }
-};
+}
 
 async function startMatch() {
     houseDataId = Math.floor(Math.random() * (choices.length - 1));
@@ -59,8 +59,6 @@ async function startMatch() {
     let houseMove = choices[houseDataId];
     housePick.appendChild(getButtonCopy(houseMove));
 }
-
-
 
 for (let i = 0; i < gameBtns.length; i++) {
     gameBtns[i].addEventListener("click", startMatch);

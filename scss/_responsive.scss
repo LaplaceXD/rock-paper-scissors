@@ -110,7 +110,7 @@
 @include responsive-size(desktop) {
     .scoreboard {
         border-radius: 16px;
-        
+
         &__title {
             padding: 0.2em;
             font-size: 2rem;
@@ -175,6 +175,8 @@
         }
 
         .btn--placeholder {
+            @include box-size(15em);
+            box-shadow: none;
             order: 1;
             margin-bottom: 0;
             margin-top: 15em;

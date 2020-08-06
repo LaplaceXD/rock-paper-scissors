@@ -614,6 +614,10 @@ footer p a {
     font-size: 1.25rem;
   }
   .picks .btn--placeholder {
+    height: 15em;
+    width: 15em;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
