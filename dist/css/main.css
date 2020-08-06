@@ -545,7 +545,7 @@ footer p a {
             box-shadow: none;
   }
   .round-over {
-    margin-bottom: 40vh;
+    margin-bottom: 42vh;
   }
   footer p {
     font-size: 0.7rem;
@@ -622,7 +622,7 @@ footer p a {
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 0;
-    margin-top: 15em;
+    margin-top: 12em;
   }
   .round-over {
     margin-bottom: 33vh;
