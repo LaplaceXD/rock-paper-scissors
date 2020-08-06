@@ -361,6 +361,16 @@ footer p a {
 }
 
 @media screen and (min-width: 700px) {
+  .scoreboard__title {
+    font-size: 1.5rem;
+  }
+  .scoreboard__card p {
+    font-size: 0.8rem;
+  }
+  .scoreboard__score {
+    margin-top: -0.15em;
+    font-size: 3rem;
+  }
   .gameview {
     margin-top: 1em;
     width: 20em;
