@@ -4,6 +4,11 @@
     margin: 3em auto;
     padding: 3em 0 2.5em 0;
 
+    &.chosen {
+        visibility: hidden;
+        display: none;
+    }
+
     &__connector {
         position: relative;
         z-index: -2; // prevents transparentizing the borders

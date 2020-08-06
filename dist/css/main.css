@@ -162,6 +162,11 @@ footer p a {
   padding: 3em 0 2.5em 0;
 }
 
+.gameview.chosen {
+  visibility: hidden;
+  display: none;
+}
+
 .gameview__connector {
   position: relative;
   z-index: -2;
