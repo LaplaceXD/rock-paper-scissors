@@ -12,6 +12,7 @@ function Moves(name, winsAgainst, losesAgainst) {
 let score = 0;
 const scoreDisplay = document.querySelector(".scoreboard__score");
 
+const playAgainBtn = document.querySelector(".round-over__btn");
 const gameBtns = document.querySelectorAll(".gameview__btn");
 
 const housePick = document.querySelector(".picks__house");
@@ -31,7 +32,9 @@ const scissorsMove = new Moves("scissors", ["paper"], ["rock"]);
 console.log(rockMove);
 
 let houseDataId = null;
+let houseMoveBtn = null;
 let playerDataId = null;
+let playerMoveBtn = null;
 
 const roundOver = document.querySelector(".round-over");
 const roundOverStatus = document.querySelector(".round-over__status");
@@ -45,6 +48,22 @@ function loadDataIds() {
 }
 
 document.addEventListener("DOMContentLoaded", loadDataIds);
+
+function restartGame() {
+    gameView.classList.remove("has-chosen");
+    picksView.classList.remove("active");
+    roundOver.classList.remove("active");
+
+    playerPick.removeChild(playerMoveBtn);
+    housePick.removeChild(houseMoveBtn);
+
+    houseDataId = null;
+    houseMoveBtn = null;
+    playerDataId = null;
+    playerMoveBtn = null;
+}
+
+playAgainBtn.addEventListener("click", restartGame);
 
 function getButtonCopy(move) {
     function createButtonCopy(orignal) {
@@ -114,15 +133,17 @@ async function match() {
     houseDataId = Math.floor(Math.random() * (choices.length - 1));
     playerDataId = this.getAttribute("data-id");
 
-    gameView.classList.add("chosen");
+    gameView.classList.add("has-chosen");
     picksView.classList.add("active");
 
     let playerMove = choices[playerDataId];
-    playerPick.appendChild(getButtonCopy(playerMove));
+    playerMoveBtn = getButtonCopy(playerMove);
+    playerPick.appendChild(playerMoveBtn);
 
     await sleep(500);
     let houseMove = choices[houseDataId];
-    housePick.appendChild(getButtonCopy(houseMove));
+    houseMoveBtn = getButtonCopy(houseMove);
+    housePick.appendChild(houseMoveBtn);
 
     let status = compareMoves();
     await sleep(500);

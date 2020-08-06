@@ -162,7 +162,7 @@ footer p a {
   padding: 3em 0 2.5em 0;
 }
 
-.gameview.chosen {
+.gameview.has-chosen {
   visibility: hidden;
   display: none;
 }
