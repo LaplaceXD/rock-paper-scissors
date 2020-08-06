@@ -335,7 +335,9 @@ footer p a {
 }
 
 .after-screen {
-  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 8em;
   margin-top: -1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,6 +365,10 @@ footer p a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1rem;
+}
+
+.after-screen__btn:hover {
+  color: red;
 }
 
 @media screen and (min-width: 700px) {

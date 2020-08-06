@@ -1,5 +1,7 @@
 .after-screen {
-    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 8em;
     margin-top: -1em;
     display: flex;
     flex-direction: column;
@@ -19,5 +21,9 @@
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-size: 1rem;
+        
+        &:hover {
+            color: red;
+        }
     }
 }
