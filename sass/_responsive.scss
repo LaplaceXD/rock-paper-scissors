@@ -115,4 +115,32 @@
             }
         }
     }
+
+    .btn--rules {
+        right: 0;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    footer {
+        flex-direction: column;
+        padding-bottom: 1em;
+        
+        P {
+            font-size: 1rem;
+
+            &:first-child {
+                align-items: flex-start;
+            }
+
+            &:last-child {
+                padding-left: 2em;
+                align-items: flex-start;
+            }
+
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
