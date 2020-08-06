@@ -47,15 +47,23 @@ $paper-colors: (
     max-width: $side-length;
 }
 
-@mixin absolute-position(
-    $top: initial,
-    $right: initial,
-    $bottom: initial,
-    $left: initial
-) {
+@mixin absolute-position($top, $right, $bottom, $left) {
     position: absolute;
     top: $top;
     left: $left;
     right: $right;
     bottom: $bottom;
+}
+
+@mixin responsive-size($screen-width) {
+    @if $screen-width == tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $screen-width == desktop {
+        @media screen and(min-width: 1368px) {
+            @content;
+        }
+    }
 }
