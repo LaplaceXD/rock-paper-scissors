@@ -753,6 +753,9 @@ footer p a:hover {
 }
 
 .settings__close {
+  position: absolute;
+  top: 0.25em;
+  right: 0.75em;
   font-size: 2rem;
   font-weight: 100;
   color: gray;
