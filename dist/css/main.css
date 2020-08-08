@@ -519,21 +519,27 @@ footer p a {
   .gameview__connector {
     width: 14em;
   }
-  .gameview__btn, .picks .btn--placeholder {
-    height: 9em;
-    width: 9em;
+  .gameview__btn img, .picks .btn--placeholder img {
+    height: 110%;
+    width: 110%;
     -webkit-box-shadow: 0px -6px #d9d9d9;
             box-shadow: 0px -6px #d9d9d9;
   }
   .gameview__btn--paper::before {
+    height: 9em;
+    width: 9em;
     -webkit-box-shadow: -1px 8px #0d2fd9;
             box-shadow: -1px 8px #0d2fd9;
   }
   .gameview__btn--scissors::before {
+    height: 9em;
+    width: 9em;
     -webkit-box-shadow: -1px 8px #9b6c0d;
             box-shadow: -1px 8px #9b6c0d;
   }
   .gameview__btn--rock::before {
+    height: 9em;
+    width: 9em;
     -webkit-box-shadow: -1px 8px #9c1c33;
             box-shadow: -1px 8px #9c1c33;
   }
@@ -622,7 +628,7 @@ footer p a {
   }
   .gameview {
     margin-top: 1em;
-    width: 24em;
+    width: 26em;
   }
   .gameview__connector {
     width: 20em;
@@ -630,18 +636,29 @@ footer p a {
   .gameview__btn, .picks .btn--placeholder {
     height: 11em;
     width: 11em;
+  }
+  .gameview__btn img, .picks .btn--placeholder img {
+    height: 95%;
+    width: 95%;
+    padding: 3em;
     -webkit-box-shadow: 0px -8px #d9d9d9;
             box-shadow: 0px -8px #d9d9d9;
   }
   .gameview__btn--paper::before {
+    height: 11em;
+    width: 11em;
     -webkit-box-shadow: -1px 10px #0d2fd9;
             box-shadow: -1px 10px #0d2fd9;
   }
   .gameview__btn--scissors::before {
+    height: 11em;
+    width: 11em;
     -webkit-box-shadow: -1px 10px #9b6c0d;
             box-shadow: -1px 10px #9b6c0d;
   }
   .gameview__btn--rock::before {
+    height: 11em;
+    width: 11em;
     -webkit-box-shadow: -1px 10px #9c1c33;
             box-shadow: -1px 10px #9c1c33;
   }

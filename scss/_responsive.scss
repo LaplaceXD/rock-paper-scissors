@@ -23,18 +23,24 @@
         }
 
         &__btn {
-            @include box-size(9em);
-            box-shadow: 0px -6px darken(white, 15%);
+
+            img {
+                @include box-size(110%);
+                box-shadow: 0px -6px darken(white, 15%);
+            }
 
             &--paper::before {
+                @include box-size(9em);
                 box-shadow: -1px 8px shade-button($paper-colors, 20%);
             }
 
             &--scissors::before {
+                @include box-size(9em);
                 box-shadow: -1px 8px shade-button($scissors-colors, 20%);
             }
 
             &--rock::before {
+                @include box-size(9em);
                 box-shadow: -1px 8px shade-button($rock-colors, 20%);
             }
         }
@@ -132,7 +138,7 @@
 
     .gameview {
         margin-top: 1em;
-        width: 24em;
+        width: 26em;
 
         &__connector {
             width: 20em;
@@ -140,17 +146,25 @@
 
         &__btn {
             @include box-size(11em);
-            box-shadow: 0px -8px darken(white, 15%);
+
+            img {
+                @include box-size(95%);
+                padding: 3em;
+                box-shadow: 0px -8px darken(white, 15%);
+            }
 
             &--paper::before {
+                @include box-size (11em);
                 box-shadow: -1px 10px shade-button($paper-colors, 20%);
             }
 
             &--scissors::before {
+                @include box-size (11em);
                 box-shadow: -1px 10px shade-button($scissors-colors, 20%);
             }
 
             &--rock::before {
+                @include box-size (11em);
                 box-shadow: -1px 10px shade-button($rock-colors, 20%);
             }
         }
