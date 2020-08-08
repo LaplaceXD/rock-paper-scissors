@@ -304,7 +304,7 @@ footer p a {
   z-index: -1;
 }
 
-.btn--rules {
+.btn--settings {
   color: white;
   position: fixed;
   bottom: 0;
@@ -324,12 +324,12 @@ footer p a {
   transition: background-color 500ms 0ms ease;
 }
 
-.btn--rules:hover {
+.btn--settings:hover {
   color: #2a46c0;
   background-color: white;
 }
 
-.rules {
+.settings {
   position: absolute;
   top: 0;
   background-color: white;
@@ -356,20 +356,20 @@ footer p a {
   transition: transform 500ms 0ms ease, -webkit-transform 500ms 0ms ease;
 }
 
-.rules h1 {
+.settings h1 {
   color: #3b4363;
   text-transform: uppercase;
   font-size: 2.5rem;
 }
 
-.rules__close {
+.settings__close {
   font-size: 2rem;
   font-weight: 100;
   color: gray;
   cursor: pointer;
 }
 
-.rules.active {
+.settings.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
