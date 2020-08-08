@@ -181,6 +181,11 @@ footer p a:hover {
   margin: auto;
 }
 
+.gameview .pentagon {
+  visibility: hidden;
+  display: none;
+}
+
 .gameview__btns {
   height: 100%;
   width: 100%;
@@ -259,6 +264,14 @@ footer p a:hover {
   -webkit-box-shadow: -1px 6px #0d2fd9;
           box-shadow: -1px 6px #0d2fd9;
   z-index: -1;
+}
+
+.gameview__btn--scissors {
+  position: absolute;
+  top: 0;
+  left: initial;
+  right: 0;
+  bottom: initial;
 }
 
 .gameview__btn--scissors::before {
@@ -359,6 +372,11 @@ footer p a:hover {
 
 .gameview.hard-active .triangle {
   display: none;
+}
+
+.gameview.hard-active .pentagon {
+  visibility: visible;
+  display: block;
 }
 
 .gameview.hard-active .gameview__btn {

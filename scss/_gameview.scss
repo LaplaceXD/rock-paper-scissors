@@ -16,6 +16,11 @@
         margin: auto;
     }
 
+    .pentagon {
+        visibility: hidden;
+        display: none;
+    }
+
     &__btns {
         @include box-size(100%);
         @include absolute-position(0, initial, initial, initial);
@@ -59,6 +64,8 @@
         }
 
         &--scissors {
+            @include absolute-position(0, 0, initial, initial);
+            
             &::before {
                 @include border-button-preset(8em, $scissors-colors);
             }
@@ -97,6 +104,11 @@
     &.hard-active {
         .triangle {
             display: none;
+        }
+
+        .pentagon {
+            visibility: visible;
+            display: block;
         }
 
         .gameview__btn {
