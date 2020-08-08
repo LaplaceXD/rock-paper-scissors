@@ -441,6 +441,8 @@ footer p a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1rem;
+  -webkit-transition: color 500ms 0ms ease;
+  transition: color 500ms 0ms ease;
 }
 
 .round-over__btn:hover {
