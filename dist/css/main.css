@@ -925,6 +925,8 @@ footer p a:hover {
   }
   .gameview.hard-active .gameview__btn img {
     padding: 1.25em;
+    -webkit-box-shadow: 0px -4px #d9d9d9;
+            box-shadow: 0px -4px #d9d9d9;
   }
   .gameview.hard-active .gameview__btn--paper {
     margin-top: 6em;
@@ -932,8 +934,8 @@ footer p a:hover {
   .gameview.hard-active .gameview__btn--paper::before {
     height: 7em;
     width: 7em;
-    -webkit-box-shadow: -1px 8px #0d2fd9;
-            box-shadow: -1px 8px #0d2fd9;
+    -webkit-box-shadow: -1px 6px #0d2fd9;
+            box-shadow: -1px 6px #0d2fd9;
   }
   .gameview.hard-active .gameview__btn--scissors {
     margin-top: 0;
@@ -941,8 +943,8 @@ footer p a:hover {
   .gameview.hard-active .gameview__btn--scissors::before {
     height: 7em;
     width: 7em;
-    -webkit-box-shadow: -1px 8px #9b6c0d;
-            box-shadow: -1px 8px #9b6c0d;
+    -webkit-box-shadow: -1px 6px #9b6c0d;
+            box-shadow: -1px 6px #9b6c0d;
   }
   .gameview.hard-active .gameview__btn--rock {
     margin-right: 4.5em;
@@ -950,8 +952,8 @@ footer p a:hover {
   .gameview.hard-active .gameview__btn--rock::before {
     height: 7em;
     width: 7em;
-    -webkit-box-shadow: -1px 8px #9c1c33;
-            box-shadow: -1px 8px #9c1c33;
+    -webkit-box-shadow: -1px 6px #9c1c33;
+            box-shadow: -1px 6px #9c1c33;
   }
   .gameview.hard-active .gameview__btn--spock {
     margin-top: 6em;
@@ -959,8 +961,8 @@ footer p a:hover {
   .gameview.hard-active .gameview__btn--spock::before {
     height: 7em;
     width: 7em;
-    -webkit-box-shadow: -1px 8px #288595;
-            box-shadow: -1px 8px #288595;
+    -webkit-box-shadow: -1px 6px #288595;
+            box-shadow: -1px 6px #288595;
   }
   .gameview.hard-active .gameview__btn--lizard {
     margin-left: 4.5em;
@@ -968,8 +970,8 @@ footer p a:hover {
   .gameview.hard-active .gameview__btn--lizard::before {
     height: 7em;
     width: 7em;
-    -webkit-box-shadow: -1px 8px #561fbd;
-            box-shadow: -1px 8px #561fbd;
+    -webkit-box-shadow: -1px 6px #561fbd;
+            box-shadow: -1px 6px #561fbd;
   }
   .btn--settings {
     font-size: 1rem;
@@ -1056,8 +1058,11 @@ footer p a:hover {
   .scoreboard__score {
     font-size: 4rem;
   }
+  .scoreboard.hard-active .scoreboard__title {
+    font-size: 1.75rem;
+  }
   .gameview {
-    margin-top: 4em;
+    margin-top: 2em;
     width: 26em;
   }
   .gameview__connector {
@@ -1070,6 +1075,8 @@ footer p a:hover {
   .gameview__btn img, .gameview.hard-active .gameview__btn img {
     height: 95%;
     width: 95%;
+    margin-left: 0;
+    margin-top: 0.5em;
     padding: 3em;
     -webkit-box-shadow: 0px -8px #d9d9d9;
             box-shadow: 0px -8px #d9d9d9;
@@ -1091,6 +1098,58 @@ footer p a:hover {
     width: 11em;
     -webkit-box-shadow: -1px 10px #9c1c33;
             box-shadow: -1px 10px #9c1c33;
+  }
+  .gameview.hard-active {
+    margin-top: 1rem;
+    width: 28em;
+  }
+  .gameview.hard-active .gameview__btn {
+    height: 9em;
+    width: 9em;
+  }
+  .gameview.hard-active .gameview__btn img {
+    -webkit-box-shadow: 0px -6px #d9d9d9;
+            box-shadow: 0px -6px #d9d9d9;
+    padding: 1.75em;
+  }
+  .gameview.hard-active .gameview__btn--paper {
+    margin-top: 7em;
+  }
+  .gameview.hard-active .gameview__btn--paper::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #0d2fd9;
+            box-shadow: -1px 8px #0d2fd9;
+  }
+  .gameview.hard-active .gameview__btn--scissors {
+    margin-top: -1em;
+  }
+  .gameview.hard-active .gameview__btn--scissors::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #9b6c0d;
+            box-shadow: -1px 8px #9b6c0d;
+  }
+  .gameview.hard-active .gameview__btn--rock::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #9c1c33;
+            box-shadow: -1px 8px #9c1c33;
+  }
+  .gameview.hard-active .gameview__btn--spock {
+    margin-top: 7em;
+  }
+  .gameview.hard-active .gameview__btn--spock::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #288595;
+            box-shadow: -1px 8px #288595;
+  }
+  .gameview.hard-active .gameview__btn--lizard::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #561fbd;
+            box-shadow: -1px 8px #561fbd;
   }
   .btn--settings {
     right: 0;
