@@ -51,13 +51,10 @@
             margin-bottom: 1em;
         }
 
-        &__easy {
-            display: none;
-        }
-
         &__easy, 
         &__hard {
             visibility: hidden;
+            display: none;
         
             &.active {
                 visibility: visible;

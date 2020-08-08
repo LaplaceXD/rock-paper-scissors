@@ -11,6 +11,8 @@ function MoveData(name, winsAgainst, losesAgainst) {
 
 const hardBtn = document.querySelector(".difficulty__btn--hard");
 const easyBtn = document.querySelector(".difficulty__btn--easy");
+const hardRules = document.querySelector(".rules__hard");
+const easyRules = document.querySelector(".rules__easy");
 
 let score = 0;
 const scoreBoard = document.querySelector(".scoreboard");
@@ -108,6 +110,8 @@ easyBtn.addEventListener("click", function() {
     gameView.classList.remove("hard-active");
     easyBtn.classList.add("active");
     hardBtn.classList.remove("active");
+    easyRules.classList.add("active");
+    hardRules.classList.remove("active");
 });
 
 hardBtn.addEventListener("click", function() {
@@ -115,6 +119,8 @@ hardBtn.addEventListener("click", function() {
     gameView.classList.add("hard-active");
     easyBtn.classList.remove("active");
     hardBtn.classList.add("active");
+    hardRules.classList.add("active");
+    easyRules.classList.remove("active");
 });
 
 resetScore.addEventListener("click", function () {
