@@ -83,6 +83,13 @@ footer p a {
   text-transform: uppercase;
   color: #5c73db;
   text-decoration: none;
+  -webkit-transition: color 500ms ease, background-color 500ms ease;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+
+footer p a:hover {
+  color: #151823;
+  background-color: white;
 }
 
 .scoreboard {
@@ -595,14 +602,16 @@ footer p a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1rem;
-  -webkit-transition: color 500ms 0ms ease;
-  transition: color 500ms 0ms ease;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 500ms 250ms ease;
   transition: -webkit-transform 500ms 250ms ease;
   transition: transform 500ms 250ms ease;
   transition: transform 500ms 250ms ease, -webkit-transform 500ms 250ms ease;
+  -webkit-transition: color 500ms ease, -webkit-transform 500ms ease;
+  transition: color 500ms ease, -webkit-transform 500ms ease;
+  transition: color 500ms ease, transform 500ms ease;
+  transition: color 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .round-over__btn.pop {
