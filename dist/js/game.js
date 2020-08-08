@@ -13,6 +13,7 @@ const hardBtn = document.querySelector(".difficulty__btn--hard");
 const easyBtn = document.querySelector(".difficulty__btn--easy");
 
 let score = 0;
+const scoreBoard = document.querySelector(".scoreboard");
 const scoreDisplay = document.querySelector(".scoreboard__score");
 const resetScore = document.querySelector(".reset-score");
 const saveScoreYes = document.querySelector(".save__btn--yes");
@@ -101,6 +102,20 @@ function initiateRoundOver(roundIsOver) {
 }
 
 document.addEventListener("DOMContentLoaded", loadData);
+
+easyBtn.addEventListener("click", function() {
+    scoreBoard.classList.remove("hard-active");
+    gameView.classList.remove("hard-active");
+    easyBtn.classList.add("active");
+    hardBtn.classList.remove("active");
+});
+
+hardBtn.addEventListener("click", function() {
+    scoreBoard.classList.add("hard-active");
+    gameView.classList.add("hard-active");
+    easyBtn.classList.remove("active");
+    hardBtn.classList.add("active");
+});
 
 resetScore.addEventListener("click", function () {
     score = 0;
