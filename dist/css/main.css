@@ -359,7 +359,127 @@ footer p a {
 .settings h1 {
   color: #3b4363;
   text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.settings .rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings .rules h1 {
   font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.settings .difficulty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings .difficulty h1 {
+  margin-right: 2em;
+}
+
+.settings .difficulty__btn {
+  border: 2px solid #3b4363;
+  padding: 0.75em 1.5em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  -webkit-transition: color 500ms ease, background-color 500ms ease;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+
+.settings .difficulty__btn--easy {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.settings .difficulty__btn--hard {
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.settings .difficulty__btn:hover, .settings .difficulty__btn.active {
+  background-color: #3b4363;
+  color: white;
+}
+
+.settings .save {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings .save h1 {
+  margin-right: 2em;
+}
+
+.settings .save__btn {
+  border: 2px solid #3b4363;
+  padding: 0.75em 1.7em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  -webkit-transition: color 500ms ease, background-color 500ms ease;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+
+.settings .save__btn--yes {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.settings .save__btn--no {
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.settings .save__btn:hover, .settings .save__btn.active {
+  background-color: #3b4363;
+  color: white;
+}
+
+.settings .reset-score {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border: 2px solid red;
+  margin: 0 2em;
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  padding: 0.75em 2em;
+  font-size: 1.25rem;
+  -webkit-transition: color 500ms ease, background-color 500ms ease;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+
+.settings .reset-score:hover {
+  color: red;
+  background-color: white;
 }
 
 .settings__close {
