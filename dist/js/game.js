@@ -215,6 +215,7 @@ async function match() {
     for (let btn of gameBtns) btn.classList.remove("pop");
     await sleep(200);
     gameView.classList.add("has-chosen");
+    await sleep(300);
     picksView.classList.add("active");
 
     let playerMove = choices[playerDataId];

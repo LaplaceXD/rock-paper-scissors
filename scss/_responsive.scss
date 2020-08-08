@@ -53,6 +53,16 @@
                 @include box-size(9em);
                 box-shadow: -1px 8px shade-button($rock-colors, 20%);
             }
+
+            &--spock::before {
+                @include box-size(9em);
+                box-shadow: -1px 8px shade-button($spock-colors, 20%);
+            }
+
+            &--lizard::before {
+                @include box-size(9em);
+                box-shadow: -1px 8px shade-button($lizard-colors, 20%);
+            }
         }
 
         &.hard-active {
@@ -244,10 +254,20 @@
                 @include box-size(11em);
                 box-shadow: -1px 10px shade-button($rock-colors, 20%);
             }
+
+            &--spock::before {
+                @include box-size(11em);
+                box-shadow: -1px 10px shade-button($spock-colors, 20%);
+            }
+
+            &--lizard::before {
+                @include box-size(11em);
+                box-shadow: -1px 10px shade-button($lizard-colors, 20%);
+            }
         }
 
         &.hard-active {
-            margin-top: 1rem;
+            margin-top: 2rem;
             width: 28em;
 
             .gameview__btn {

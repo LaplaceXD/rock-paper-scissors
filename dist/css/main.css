@@ -420,8 +420,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--paper {
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
   position: absolute;
   top: 0;
   left: initial;
@@ -477,8 +477,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--rock {
-  -webkit-transition-delay: 200ms;
-          transition-delay: 200ms;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
   position: absolute;
   top: initial;
   left: initial;
@@ -506,8 +506,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--lizard {
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
   display: initial;
   visibility: visible;
   position: absolute;
@@ -537,8 +537,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--spock {
-  -webkit-transition-delay: 400ms;
-          transition-delay: 400ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
   display: initial;
   visibility: visible;
   position: absolute;
@@ -937,6 +937,18 @@ footer p a:hover {
     -webkit-box-shadow: -1px 8px #9c1c33;
             box-shadow: -1px 8px #9c1c33;
   }
+  .gameview__btn--spock::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #288595;
+            box-shadow: -1px 8px #288595;
+  }
+  .gameview__btn--lizard::before {
+    height: 9em;
+    width: 9em;
+    -webkit-box-shadow: -1px 8px #561fbd;
+            box-shadow: -1px 8px #561fbd;
+  }
   .gameview.hard-active {
     width: 22em;
   }
@@ -1116,8 +1128,20 @@ footer p a:hover {
     -webkit-box-shadow: -1px 10px #9c1c33;
             box-shadow: -1px 10px #9c1c33;
   }
+  .gameview__btn--spock::before {
+    height: 11em;
+    width: 11em;
+    -webkit-box-shadow: -1px 10px #288595;
+            box-shadow: -1px 10px #288595;
+  }
+  .gameview__btn--lizard::before {
+    height: 11em;
+    width: 11em;
+    -webkit-box-shadow: -1px 10px #561fbd;
+            box-shadow: -1px 10px #561fbd;
+  }
   .gameview.hard-active {
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 28em;
   }
   .gameview.hard-active .gameview__btn {
