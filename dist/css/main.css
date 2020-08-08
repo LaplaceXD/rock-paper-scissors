@@ -644,6 +644,19 @@ footer p a:hover {
   margin-bottom: 1em;
 }
 
+.settings .rules__easy {
+  display: none;
+}
+
+.settings .rules__easy, .settings .rules__hard {
+  visibility: hidden;
+}
+
+.settings .rules__easy.active, .settings .rules__hard.active {
+  visibility: visible;
+  display: initial;
+}
+
 .settings .difficulty {
   display: -webkit-box;
   display: -ms-flexbox;

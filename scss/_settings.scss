@@ -50,6 +50,20 @@
             font-size: 2.5rem;
             margin-bottom: 1em;
         }
+
+        &__easy {
+            display: none;
+        }
+
+        &__easy, 
+        &__hard {
+            visibility: hidden;
+        
+            &.active {
+                visibility: visible;
+                display: initial;
+            }
+        }
     }
 
     .difficulty {
