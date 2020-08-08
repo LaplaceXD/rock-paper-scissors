@@ -197,6 +197,10 @@ footer p a:hover {
           justify-content: center;
 }
 
+.gameview__btns button {
+  background: none;
+}
+
 .gameview__btn, .gameview.hard-active .gameview__btn {
   height: 8em;
   width: 8em;
@@ -362,6 +366,28 @@ footer p a:hover {
   width: 6em;
 }
 
+.gameview.hard-active .gameview__btn img {
+  -webkit-box-shadow: 0px -4px #d9d9d9;
+          box-shadow: 0px -4px #d9d9d9;
+  background-color: white;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 1em;
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+}
+
+.gameview.hard-active .gameview__btn--paper {
+  position: absolute;
+  top: 0;
+  left: initial;
+  right: 0;
+  bottom: initial;
+  margin-top: 5.5em;
+  margin-right: 0.5em;
+}
+
 .gameview.hard-active .gameview__btn--paper:before {
   content: "";
   border-radius: 50%;
@@ -370,14 +396,18 @@ footer p a:hover {
   left: initial;
   right: 0;
   bottom: initial;
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background: linear-gradient(45deg, #4865f4, #5671f5);
   -webkit-box-shadow: -1px 6px #0d2fd9;
           box-shadow: -1px 6px #0d2fd9;
   z-index: -1;
+}
+
+.gameview.hard-active .gameview__btn--scissors {
+  margin-top: 1em;
 }
 
 .gameview.hard-active .gameview__btn--scissors:before {
@@ -388,14 +418,23 @@ footer p a:hover {
   left: initial;
   right: 0;
   bottom: initial;
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background: linear-gradient(45deg, #ec9e0e, #eca922);
   -webkit-box-shadow: -1px 6px #9b6c0d;
           box-shadow: -1px 6px #9b6c0d;
   z-index: -1;
+}
+
+.gameview.hard-active .gameview__btn--rock {
+  position: absolute;
+  top: initial;
+  left: initial;
+  right: 0;
+  bottom: 0;
+  margin-right: 3.5em;
 }
 
 .gameview.hard-active .gameview__btn--rock:before {
@@ -406,8 +445,8 @@ footer p a:hover {
   left: initial;
   right: 0;
   bottom: initial;
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background: linear-gradient(45deg, #dc2e4e, #dd405d);
@@ -419,6 +458,12 @@ footer p a:hover {
 .gameview.hard-active .gameview__btn--lizard {
   display: initial;
   visibility: visible;
+  position: absolute;
+  top: initial;
+  left: 0;
+  right: initial;
+  bottom: 0;
+  margin-left: 2.5em;
 }
 
 .gameview.hard-active .gameview__btn--lizard:before {
@@ -429,8 +474,8 @@ footer p a:hover {
   left: initial;
   right: 0;
   bottom: initial;
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background: linear-gradient(45deg, #834fe3, #8c5de5);
@@ -442,6 +487,13 @@ footer p a:hover {
 .gameview.hard-active .gameview__btn--spock {
   display: initial;
   visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: initial;
+  bottom: initial;
+  margin-top: 5.5em;
+  margin-left: 0.5em;
 }
 
 .gameview.hard-active .gameview__btn--spock:before {
@@ -452,8 +504,8 @@ footer p a:hover {
   left: initial;
   right: 0;
   bottom: initial;
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   background: linear-gradient(45deg, #40b9ce, #52bed1);

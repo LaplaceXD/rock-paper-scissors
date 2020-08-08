@@ -21,6 +21,10 @@
         @include absolute-position(0, initial, initial, initial);
         display: flex;
         justify-content: center;
+
+        button {
+            background: none;
+        }
     }
 
     &__btn {
@@ -99,39 +103,63 @@
             @extend .gameview__btn;
             @include box-size(6em);
 
+            img {
+                box-shadow: 0px -4px darken(white, 15%);
+                background-color: white;
+                margin-bottom: 1em;
+                margin-left: 1em;
+                padding: 1em;
+                border-radius: 50%;
+                @include box-size(80%);
+            }
+
             &--paper {
+                @include absolute-position(0, 0, initial, initial);
+                margin-top: 5.5em;
+                margin-right: 0.5em;
+
                 &:before {
-                    @include border-button-preset(6em, $paper-colors);
+                    @include border-button-preset(5em, $paper-colors);
                 }
             }
 
             &--scissors {
+                margin-top: 1em;
+
                 &:before {
-                    @include border-button-preset(6em, $scissors-colors);
+                    @include border-button-preset(5em, $scissors-colors);
                 }
             }
 
             &--rock {
+                @include absolute-position(initial, 0, 0, initial);
+                margin-right: 3.5em;
+
                 &:before {
-                    @include border-button-preset(6em, $rock-colors);
+                    @include border-button-preset(5em, $rock-colors);
                 }
             }
 
             &--lizard {
                 display: initial;
                 visibility: visible;
+                @include absolute-position(initial, initial, 0, 0);
+                margin-left: 2.5em;
 
                 &:before {
-                    @include border-button-preset(6em, $lizard-colors);
+                    @include border-button-preset(5em, $lizard-colors);
                 }
             }
 
             &--spock {
                 display: initial;
                 visibility: visible;
-                
+                @include absolute-position(0, initial, initial, 0);
+                margin-top: 5.5em;
+                margin-left: 0.5em;
+
                 &:before {
-                    @include border-button-preset(6em, $spock-colors);
+                    @include border-button-preset(5em, $spock-colors);
                 }
             }
         }
