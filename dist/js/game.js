@@ -42,11 +42,12 @@ const roundOverBtn = document.querySelector(".round-over__btn");
 const playAgainBtn = document.querySelector(".round-over__btn");
 
 function loadData() {
+    score = 0;
     if (localStorage.getItem("save") != "string")
         localStorage.setItem("save", "true");
-
-    if (localStorage.getItem("save") == "true")
+    else if (localStorage.getItem("save") == "true")
         score = localStorage.getItem("score");
+
     scoreDisplay.textContent = score;
     for (let btn of gameBtns) btn.classList.add("pop");
 
