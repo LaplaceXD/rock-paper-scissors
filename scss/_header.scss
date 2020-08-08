@@ -20,6 +20,12 @@
         font-size: 1.25rem;
         line-height: 0.8;
         text-transform: uppercase;
+
+        &--lizard,
+        &--spock {
+            visibility: hidden;
+            display: none;
+        }
     }
 
     &__card {
@@ -42,5 +48,18 @@
     &__score {
         color: $dark-text;
         font-size: 2.5rem;
+    }
+
+    &.hard-active {
+        .scoreboard__title {
+            @extend .scoreboard__title;
+            font-size: 1.2rem;
+
+            &--lizard,
+            &--spock {
+                visibility: visible;
+                display: initial;
+            }
+        }
     }
 }
