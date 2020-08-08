@@ -2,7 +2,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function Moves(name, winsAgainst, losesAgainst) {
+function MoveData(name, winsAgainst, losesAgainst) {
     this.name = name;
     this.winsAgainst = [...winsAgainst];
     this.losesAgainst = [...losesAgainst];
@@ -26,10 +26,9 @@ const rock = document.querySelector(".gameview__btn--rock");
 const scissors = document.querySelector(".gameview__btn--scissors");
 
 const choices = [];
-const paperMove = new Moves("paper", ["rock"], ["scissors"]);
-const rockMove = new Moves("rock", ["scissors"], ["paper"]);
-const scissorsMove = new Moves("scissors", ["paper"], ["rock"]);
-console.log(rockMove);
+const paperData = new MoveData("paper", ["rock"], ["scissors"]);
+const rockData = new MoveData("rock", ["scissors"], ["paper"]);
+const scissorsData = new MoveData("scissors", ["paper"], ["rock"]);
 
 let houseDataId = null;
 let houseMoveBtn = null;
@@ -84,30 +83,27 @@ function getButtonCopy(move) {
 }
 
 function compareMoves() {
-    function getMove(dataid) {
+    function getMoveData(dataid) {
         let move = choices[dataid];
 
         switch (move) {
             case "paper":
-                return paperMove;
+                return paperData;
             case "rock":
-                return rockMove;
+                return rockData;
             case "scissors":
-                return scissorsMove;
+                return scissorsData;
         }
     }
 
-    let playerLosesAgainst = getMove(playerDataId).losesAgainst;
+    let playerMoveData = getMoveData(playerDataId);
 
-    if (playerDataId == houseDataId) {
-        return "draw";
-    }
+    if (playerMoveData.losesAgainst.some((n) => n == choices[houseDataId]))
+        return "lose";
+    else if (playerMoveData.winsAgainst.some((n) => n == choices[houseDataId]))
+        return "win";
 
-    for (let losingMove of playerLosesAgainst) {
-        if (losingMove == choices[houseDataId]) return "lose";
-    }
-
-    return "win";
+    return "draw";
 }
 
 function createDecision(status) {
@@ -130,7 +126,7 @@ function createDecision(status) {
 }
 
 async function match() {
-    houseDataId = Math.floor(Math.random() * (choices.length - 1));
+    houseDataId = Math.floor(Math.random() * choices.length);
     playerDataId = this.getAttribute("data-id");
 
     gameView.classList.add("has-chosen");
