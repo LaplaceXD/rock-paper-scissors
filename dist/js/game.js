@@ -25,7 +25,6 @@ const scissors = document.querySelector(".gameview__btn--scissors");
 const spock = document.querySelector(".gameview__btn--spock");
 const lizard = document.querySelector(".gameview__btn--lizard");
 
-
 const backdropConnector = document.querySelector(".gameview__connector");
 const gameView = document.querySelector(".gameview");
 const picksView = document.querySelector(".picks");
@@ -34,11 +33,31 @@ const housePick = document.querySelector(".picks__house");
 const playerPick = document.querySelector(".picks__player");
 
 const choices = [];
-const paperData = new MoveData("paper", ["rock", "spock"], ["scissors", "lizard"]);
-const rockData = new MoveData("rock", ["scissors", "lizard"], ["paper", "spock"]);
-const scissorsData = new MoveData("scissors", ["paper", "lizard"], ["rock", "spock"]);
-const spockData = new MoveData("spock", ["scissors", "rock"], ["paper", "lizard"]);
-const lizardData = new MoveData("lizard", ["spock", "paper"], ["scissors", "rock"]);
+const paperData = new MoveData(
+    "paper",
+    ["rock", "spock"],
+    ["scissors", "lizard"]
+);
+const rockData = new MoveData(
+    "rock",
+    ["scissors", "lizard"],
+    ["paper", "spock"]
+);
+const scissorsData = new MoveData(
+    "scissors",
+    ["paper", "lizard"],
+    ["rock", "spock"]
+);
+const spockData = new MoveData(
+    "spock",
+    ["scissors", "rock"],
+    ["paper", "lizard"]
+);
+const lizardData = new MoveData(
+    "lizard",
+    ["spock", "paper"],
+    ["scissors", "rock"]
+);
 
 let houseDataId = null;
 let houseMoveBtn = null;
@@ -130,6 +149,10 @@ function getButtonCopy(move) {
             return createButtonCopy(rock);
         case "scissors":
             return createButtonCopy(scissors);
+        case "spock":
+            return createButtonCopy(spock);
+        case "lizard":
+            return createButtonCopy(lizard);
     }
 }
 
@@ -144,6 +167,10 @@ function compareMoves() {
                 return rockData;
             case "scissors":
                 return scissorsData;
+            case "spock":
+                return spockData;
+            case "lizard":
+                return lizardData;
         }
     }
 
@@ -190,6 +217,7 @@ async function match() {
 
     let playerMove = choices[playerDataId];
     playerMoveBtn = getButtonCopy(playerMove);
+    playerMoveBtn.classList.add("active");
     playerPick.appendChild(playerMoveBtn);
     await sleep(50);
     playerMoveBtn.classList.add("pop");
@@ -197,6 +225,7 @@ async function match() {
     await sleep(500);
     let houseMove = choices[houseDataId];
     houseMoveBtn = getButtonCopy(houseMove);
+    houseMoveBtn.classList.add("active");
     housePick.appendChild(houseMoveBtn);
     await sleep(300);
     houseMoveBtn.classList.add("pop");

@@ -388,6 +388,11 @@ footer p a:hover {
   z-index: -1;
 }
 
+.gameview__btn.active, .gameview.hard-active .active.gameview__btn {
+  display: initial !important;
+  visibility: visible !important;
+}
+
 .gameview.hard-active .triangle {
   display: none;
 }

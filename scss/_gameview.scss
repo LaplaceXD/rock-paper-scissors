@@ -102,6 +102,11 @@
                 @include border-button-preset(8em, $spock-colors);
             }
         }
+
+        &.active {
+            display: initial !important;
+            visibility: visible !important;
+        }
     }
 
     &.hard-active {
