@@ -1,5 +1,3 @@
 dist/js/*.js linguist-vendored=false
 scss/*.scss linguist-vendored=false
 dist/*.html linguist-vendored=false
-
-*.scss linguist-language=SCSS
