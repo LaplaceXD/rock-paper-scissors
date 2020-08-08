@@ -73,6 +73,10 @@ const roundOverBtn = document.querySelector(".round-over__btn");
 const playAgainBtn = document.querySelector(".round-over__btn");
 
 function loadData() {
+    for (let i = 0; i < gameBtns.length; i++) {
+        gameBtns[i].addEventListener("click", match);
+    }
+
     if (localStorage.getItem("score") != "string") score = 0;
 
     if (localStorage.getItem("save") != "string")
@@ -105,7 +109,7 @@ function initiateRoundOver(roundIsOver) {
 
 document.addEventListener("DOMContentLoaded", loadData);
 
-easyBtn.addEventListener("click", function() {
+easyBtn.addEventListener("click", function () {
     scoreBoard.classList.remove("hard-active");
     gameView.classList.remove("hard-active");
     easyBtn.classList.add("active");
@@ -114,7 +118,7 @@ easyBtn.addEventListener("click", function() {
     hardRules.classList.remove("active");
 });
 
-hardBtn.addEventListener("click", function() {
+hardBtn.addEventListener("click", function () {
     scoreBoard.classList.add("hard-active");
     gameView.classList.add("hard-active");
     easyBtn.classList.remove("active");
@@ -155,6 +159,10 @@ function restartGame() {
     houseMoveBtn = null;
     playerDataId = null;
     playerMoveBtn = null;
+
+    for (let i = 0; i < gameBtns.length; i++) {
+        gameBtns[i].addEventListener("click", match);
+    }
 }
 
 playAgainBtn.addEventListener("click", restartGame);
@@ -234,6 +242,10 @@ function createDecision(status) {
 }
 
 async function match() {
+    for (let i = 0; i < gameBtns.length; i++) {
+        gameBtns[i].removeEventListener("click", match);
+    }
+
     houseDataId = Math.floor(Math.random() * choices.length);
     playerDataId = this.getAttribute("data-id");
 
@@ -261,8 +273,4 @@ async function match() {
     let status = compareMoves();
     await sleep(500);
     createDecision(status);
-}
-
-for (let i = 0; i < gameBtns.length; i++) {
-    gameBtns[i].addEventListener("click", match);
 }

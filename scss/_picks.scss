@@ -28,7 +28,7 @@
     .btn--placeholder {
         border-radius: 50%;
         @include box-size(11em);
-        z-index: -1;
+        z-index: -2;
         position: relative;
         display: flex;
         justify-content: center;
@@ -43,6 +43,7 @@
 
         &.picks__player.won,
         &.picks__house.won {
+            z-index: -9999;
             box-shadow: 0 0 0px 48px rgba(white, 0.15),
                 0 0 0px 92px rgba(white, 0.1), 0 0 0px 160px rgba(white, 0.05);
         }
