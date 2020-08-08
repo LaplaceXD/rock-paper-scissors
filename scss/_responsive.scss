@@ -45,39 +45,39 @@
         }
     }
 
-    .btn--rules {
+    .btn--settings {
         font-size: 1rem;
         padding: 0.75em 3em;
         margin-bottom: 2.5em;
     }
 
-    .rules {
-        width: 18em;
-        height: 18em;
+    .settings {
+        @include box-size(32em);
+        padding: 1em;
         transform: translateY(-200%);
-        top: 30vh;
+        top: 12vh;
         border-radius: 16px;
         box-shadow: 2px 4px 8px black;
 
-        h1 {
-            font-size: 1.5rem;
-            align-self: flex-start;
-            margin-left: 1em;
-        }
+        .rules {
+            h1{
+                position: absolute;
+                left: 0.5em;
+                top: 0.2em;
+                margin-bottom: none;
+            }
 
-        img {
-            width: 14em;
-            padding-bottom: 1em;
+            img {
+                margin-top: 2em;
+                width: 16em;
+            }
         }
 
         &__close {
-            top: 0;
-            right: 0;
-            position: absolute;
-            font-size: 2rem;
-            margin-top: 0.1em;
-            margin-right: 0.5em;
             order: -1;
+            position: absolute;
+            top: 0;
+            right: 0.5em;
         }
     }
 
@@ -169,7 +169,7 @@
         }
     }
 
-    .btn--rules {
+    .btn--settings {
         right: 0;
         margin-right: 1.5em;
         margin-bottom: 1.5em;

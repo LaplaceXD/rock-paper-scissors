@@ -384,9 +384,6 @@ footer p a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2em;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -425,9 +422,6 @@ footer p a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2em;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -664,41 +658,39 @@ footer p a {
     -webkit-box-shadow: -1px 8px #9c1c33;
             box-shadow: -1px 8px #9c1c33;
   }
-  .btn--rules {
+  .btn--settings {
     font-size: 1rem;
     padding: 0.75em 3em;
     margin-bottom: 2.5em;
   }
-  .rules {
-    width: 18em;
-    height: 18em;
+  .settings {
+    height: 32em;
+    width: 32em;
+    padding: 1em;
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
-    top: 30vh;
+    top: 12vh;
     border-radius: 16px;
     -webkit-box-shadow: 2px 4px 8px black;
             box-shadow: 2px 4px 8px black;
   }
-  .rules h1 {
-    font-size: 1.5rem;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    margin-left: 1em;
-  }
-  .rules img {
-    width: 14em;
-    padding-bottom: 1em;
-  }
-  .rules__close {
-    top: 0;
-    right: 0;
+  .settings .rules h1 {
     position: absolute;
-    font-size: 2rem;
-    margin-top: 0.1em;
-    margin-right: 0.5em;
+    left: 0.5em;
+    top: 0.2em;
+    margin-bottom: none;
+  }
+  .settings .rules img {
+    margin-top: 2em;
+    width: 16em;
+  }
+  .settings__close {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    position: absolute;
+    top: 0;
+    right: 0.5em;
   }
   .picks {
     margin-top: 40vh;
@@ -783,7 +775,7 @@ footer p a {
     -webkit-box-shadow: -1px 10px #9c1c33;
             box-shadow: -1px 10px #9c1c33;
   }
-  .btn--rules {
+  .btn--settings {
     right: 0;
     margin-right: 1.5em;
     margin-bottom: 1.5em;
