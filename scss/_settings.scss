@@ -62,6 +62,7 @@
 
         &__btn {
             border: 2px solid $dark-text;
+            color: $dark-text;
             padding: 0.75em 1.5em;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -78,7 +79,8 @@
                 border-bottom-right-radius: 8px;
             }
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
                 background-color: $dark-text;
                 color: white;
             }
@@ -95,6 +97,7 @@
 
         &__btn {
             border: 2px solid $dark-text;
+            color: $dark-text;
             padding: 0.75em 1.7em;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -110,8 +113,9 @@
                 border-top-right-radius: 8px;
                 border-bottom-right-radius: 8px;
             }
-        
-            &:hover, &.active {
+
+            &:hover,
+            &.active {
                 background-color: $dark-text;
                 color: white;
             }

@@ -11,19 +11,20 @@ function MoveData(name, winsAgainst, losesAgainst) {
 
 let score = 0;
 const scoreDisplay = document.querySelector(".scoreboard__score");
+const resetScore = document.querySelector(".reset-score");
+const saveScoreYes = document.querySelector(".save__btn--yes");
+const saveScoreNo = document.querySelector(".save__btn--no");
 
-const playAgainBtn = document.querySelector(".round-over__btn");
 const gameBtns = document.querySelectorAll(".gameview__btn");
-
-const housePick = document.querySelector(".picks__house");
-const playerPick = document.querySelector(".picks__player");
-
-const picksView = document.querySelector(".picks");
-const gameView = document.querySelector(".gameview");
-
 const paper = document.querySelector(".gameview__btn--paper");
 const rock = document.querySelector(".gameview__btn--rock");
 const scissors = document.querySelector(".gameview__btn--scissors");
+
+const gameView = document.querySelector(".gameview");
+const picksView = document.querySelector(".picks");
+
+const housePick = document.querySelector(".picks__house");
+const playerPick = document.querySelector(".picks__player");
 
 const choices = [];
 const paperData = new MoveData("paper", ["rock"], ["scissors"]);
@@ -38,8 +39,10 @@ let playerMoveBtn = null;
 const roundOver = document.querySelector(".round-over");
 const roundOverStatus = document.querySelector(".round-over__status");
 const roundOverBtn = document.querySelector(".round-over__btn");
+const playAgainBtn = document.querySelector(".round-over__btn");
 
-function loadDataIds() {
+function loadData() {
+    if (localStorage.getItem("save") == "true") score = localStorage.getItem("score");
     scoreDisplay.textContent = score;
     for (let btn of gameBtns) btn.classList.add("pop");
 
@@ -60,7 +63,22 @@ function initiateRoundOver(roundIsOver) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", loadDataIds);
+document.addEventListener("DOMContentLoaded", loadData);
+resetScore.addEventListener("click", function () {
+    score = 0;
+    localStorage.setItem("score", score);
+    scoreDisplay.textContent = score;
+});
+saveScoreYes.addEventListener("click", function () {
+    saveScoreYes.classList.add("active");
+    saveScoreNo.classList.remove("active");
+    localStorage.setItem("save", "true");
+});
+saveScoreNo.addEventListener("click", function () {
+    saveScoreYes.classList.remove("active");
+    saveScoreNo.classList.add("active");
+    localStorage.setItem("save", "false");
+});
 
 function restartGame() {
     initiateRoundOver(false);
@@ -137,6 +155,7 @@ function createDecision(status) {
             break;
     }
 
+    if (localStorage.getItem("save") == "true") localStorage.setItem("score", score);
     scoreDisplay.textContent = score;
     initiateRoundOver(true);
 }
@@ -145,8 +164,7 @@ async function match() {
     houseDataId = Math.floor(Math.random() * choices.length);
     playerDataId = this.getAttribute("data-id");
 
-    for(let btn of gameBtns)
-        btn.classList.remove("pop");
+    for (let btn of gameBtns) btn.classList.remove("pop");
     await sleep(200);
     gameView.classList.add("has-chosen");
     picksView.classList.add("active");
