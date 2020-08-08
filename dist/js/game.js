@@ -41,6 +41,8 @@ const roundOverBtn = document.querySelector(".round-over__btn");
 
 function loadDataIds() {
     scoreDisplay.textContent = score;
+    for(let btn of gameBtns)
+        btn.classList.add("pop");
 
     paper.setAttribute("data-id", choices.indexOf("paper"));
     rock.setAttribute("data-id", choices.indexOf("rock"));

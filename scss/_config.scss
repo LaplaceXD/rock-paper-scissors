@@ -72,3 +72,13 @@ $paper-colors: (
         transform: scale(1);
     }
 }
+
+@mixin border-button-preset($size, $colors) {
+    content: "";
+    border-radius: 50%;
+    @include box-size($size);
+    transform: $border-button-size;
+    background: get-gradient($colors);
+    box-shadow: -1px 6px shade-button($colors, 20%);
+    z-index: -1;
+}
