@@ -29,6 +29,7 @@
         cursor: pointer;
         transform: scale(0);
         @include transition-ease(transform);
+        transition-timing-function: cubic-bezier(0.11, 0.45, 0.42, 1.6);
 
         &.pop {
             transform: scale(1);
@@ -55,15 +56,17 @@
 
         &--scissors {
             @include absolute-position(0, 0, initial, initial);
+            transition-delay: 100ms;
 
             &::before {
-                @include border-button-preset(8em, $paper-colors);
+                @include border-button-preset(8em, $scissors-colors);
                 @include absolute-position(0, initial, initial, 0);
             }
         }
 
         &--rock {
             @include absolute-position(initial, initial, 0, initial);
+            transition-delay: 200ms;
 
             &::before {
                 @include absolute-position(0, initial, initial, 0);

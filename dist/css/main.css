@@ -201,6 +201,8 @@ footer p a {
   transition: -webkit-transform 500ms 0ms ease;
   transition: transform 500ms 0ms ease;
   transition: transform 500ms 0ms ease, -webkit-transform 500ms 0ms ease;
+  -webkit-transition-timing-function: cubic-bezier(0.11, 0.45, 0.42, 1.6);
+          transition-timing-function: cubic-bezier(0.11, 0.45, 0.42, 1.6);
 }
 
 .gameview__btn.pop, .picks .pop.btn--placeholder {
@@ -252,6 +254,8 @@ footer p a {
   left: initial;
   right: 0;
   bottom: initial;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
 .gameview__btn--scissors::before {
@@ -261,9 +265,9 @@ footer p a {
   width: 8em;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-  background: linear-gradient(45deg, #4865f4, #5671f5);
-  -webkit-box-shadow: -1px 6px #0d2fd9;
-          box-shadow: -1px 6px #0d2fd9;
+  background: linear-gradient(45deg, #ec9e0e, #eca922);
+  -webkit-box-shadow: -1px 6px #9b6c0d;
+          box-shadow: -1px 6px #9b6c0d;
   z-index: -1;
   position: absolute;
   top: 0;
@@ -278,6 +282,8 @@ footer p a {
   left: initial;
   right: initial;
   bottom: 0;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 
 .gameview__btn--rock::before {
