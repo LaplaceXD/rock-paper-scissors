@@ -766,7 +766,9 @@ footer p a:hover {
 
 .picks {
   visibility: hidden;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -813,14 +815,21 @@ footer p a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   background-color: rgba(21, 24, 35, 0.3);
   margin-bottom: 5em;
+  -webkit-transition: -webkit-box-shadow 500ms 0ms ease;
+  transition: -webkit-box-shadow 500ms 0ms ease;
+  transition: box-shadow 500ms 0ms ease;
+  transition: box-shadow 500ms 0ms ease, -webkit-box-shadow 500ms 0ms ease;
 }
 
 .picks .btn--placeholder button {
   margin: none !important;
+}
+
+.picks .btn--placeholder.picks__player.won, .picks .btn--placeholder.picks__house.won {
+  -webkit-box-shadow: 0 0 0px 32px rgba(255, 255, 255, 0.15), 0 0 0px 64px rgba(255, 255, 255, 0.1), 0 0 0px 128px rgba(255, 255, 255, 0.05);
+          box-shadow: 0 0 0px 32px rgba(255, 255, 255, 0.15), 0 0 0px 64px rgba(255, 255, 255, 0.1), 0 0 0px 128px rgba(255, 255, 255, 0.05);
 }
 
 .picks.active {

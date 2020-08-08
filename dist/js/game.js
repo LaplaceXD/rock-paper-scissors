@@ -143,6 +143,8 @@ function restartGame() {
     initiateRoundOver(false);
     for (let btn of gameBtns) btn.classList.add("pop");
 
+    housePick.classList.remove("won");
+    playerPick.classList.remove("won");
     gameView.classList.remove("has-chosen");
     picksView.classList.remove("active");
 
@@ -211,6 +213,7 @@ function createDecision(status) {
     switch (status) {
         case "win":
             score++;
+            playerPick.classList.add("won");
             roundOverStatus.textContent = "You Win";
             break;
         case "draw":
@@ -218,6 +221,7 @@ function createDecision(status) {
             break;
         case "lose":
             score--;
+            housePick.classList.add("won");
             roundOverStatus.textContent = "You Lose";
             break;
     }
