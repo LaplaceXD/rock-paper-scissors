@@ -84,6 +84,8 @@ function loadData() {
     paper.setAttribute("data-id", choices.indexOf("paper"));
     rock.setAttribute("data-id", choices.indexOf("rock"));
     scissors.setAttribute("data-id", choices.indexOf("scissors"));
+    lizard.setAttribute("data-id", choices.indexOf("lizard"));
+    spock.setAttribute("data-id", choices.indexOf("spock"));
 }
 
 function initiateRoundOver(roundIsOver) {

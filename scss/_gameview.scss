@@ -134,6 +134,7 @@
             }
 
             &--paper {
+                transition-delay: 100ms;
                 @include absolute-position(0, 0, initial, initial);
                 margin-top: 5.5em;
                 margin-right: 0.5em;
@@ -153,6 +154,7 @@
             }
 
             &--rock {
+                transition-delay: 200ms;
                 @include absolute-position(initial, 0, 0, initial);
                 margin-right: 3.5em;
 
@@ -162,6 +164,7 @@
             }
 
             &--lizard {
+                transition-delay: 300ms;
                 display: initial;
                 visibility: visible;
                 @include absolute-position(initial, initial, 0, 0);
@@ -173,6 +176,7 @@
             }
 
             &--spock {
+                transition-delay: 400ms;
                 display: initial;
                 visibility: visible;
                 @include absolute-position(0, initial, initial, 0);

@@ -420,6 +420,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--paper {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
   position: absolute;
   top: 0;
   left: initial;
@@ -475,6 +477,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--rock {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
   position: absolute;
   top: initial;
   left: initial;
@@ -502,6 +506,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--lizard {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
   display: initial;
   visibility: visible;
   position: absolute;
@@ -531,6 +537,8 @@ footer p a:hover {
 }
 
 .gameview.hard-active .gameview__btn--spock {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
   display: initial;
   visibility: visible;
   position: absolute;
