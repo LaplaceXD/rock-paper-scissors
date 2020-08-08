@@ -882,6 +882,9 @@ footer p a:hover {
     margin-top: -0.15em;
     font-size: 3rem;
   }
+  .scoreboard.hard-active .scoreboard__title {
+    font-size: 1.3rem;
+  }
   .gameview {
     margin-top: 1em;
     width: 20em;

@@ -12,6 +12,12 @@
             margin-top: -0.15em;
             font-size: 3rem;
         }
+
+        &.hard-active {
+            .scoreboard__title {
+                font-size: 1.3rem;
+            }
+        }
     }
 
     .gameview {
