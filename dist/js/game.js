@@ -37,6 +37,7 @@ let playerMoveBtn = null;
 
 const roundOver = document.querySelector(".round-over");
 const roundOverStatus = document.querySelector(".round-over__status");
+const roundOverBtn = document.querySelector(".round-over__btn");
 
 function loadDataIds() {
     scoreDisplay.textContent = score;
@@ -46,12 +47,25 @@ function loadDataIds() {
     scissors.setAttribute("data-id", choices.indexOf("scissors"));
 }
 
+function initiateRoundOver(roundIsOver) {
+    if(roundIsOver) {
+        roundOver.classList.add("active")
+        roundOverStatus.classList.add("pop");
+        roundOverBtn.classList.add("pop");
+    } else {
+        roundOver.classList.remove("active")
+        roundOverStatus.classList.remove("pop");
+        roundOverBtn.classList.remove("pop");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", loadDataIds);
 
 function restartGame() {
+    initiateRoundOver(false);
+
     gameView.classList.remove("has-chosen");
     picksView.classList.remove("active");
-    roundOver.classList.remove("active");
 
     playerPick.removeChild(playerMoveBtn);
     housePick.removeChild(houseMoveBtn);
@@ -122,7 +136,7 @@ function createDecision(status) {
     }
 
     scoreDisplay.textContent = score;
-    roundOver.classList.add("active");
+    initiateRoundOver(true);
 }
 
 async function match() {

@@ -385,6 +385,7 @@ footer p a {
 
 .picks h1 {
   font-weight: 600;
+  text-align: center;
 }
 
 .picks .btn--placeholder {
@@ -413,7 +414,9 @@ footer p a {
 
 .round-over {
   visibility: hidden;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   bottom: 0;
   margin-bottom: 10em;
@@ -431,6 +434,17 @@ footer p a {
   color: white;
   font-size: 3rem;
   letter-spacing: 0.2rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 500ms 0ms ease;
+  transition: -webkit-transform 500ms 0ms ease;
+  transition: transform 500ms 0ms ease;
+  transition: transform 500ms 0ms ease, -webkit-transform 500ms 0ms ease;
+}
+
+.round-over__status.pop {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .round-over__btn {
@@ -443,6 +457,17 @@ footer p a {
   font-size: 1rem;
   -webkit-transition: color 500ms 0ms ease;
   transition: color 500ms 0ms ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 500ms 250ms ease;
+  transition: -webkit-transform 500ms 250ms ease;
+  transition: transform 500ms 250ms ease;
+  transition: transform 500ms 250ms ease, -webkit-transform 500ms 250ms ease;
+}
+
+.round-over__btn.pop {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .round-over__btn:hover {
@@ -451,9 +476,6 @@ footer p a {
 
 .round-over.active {
   visibility: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 @media screen and (min-width: 700px) {

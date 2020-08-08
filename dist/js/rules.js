@@ -1,6 +1,7 @@
 const rulesBtn = document.querySelector(".btn--rules");
 const rules = document.querySelector(".rules");
 const rulesClose = document.querySelector(".rules__close");
+const gameView = document.querySelector(".gameview");
 
 let rulesOpen = false;
 

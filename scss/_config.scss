@@ -63,3 +63,12 @@ $paper-colors: (
 @mixin transition-ease($property, $delay: 0ms) {
     transition: $property 500ms $delay ease;
 }
+
+@mixin pop-transition($delay: 0ms) {
+    transform: scale(0);
+    @include transition-ease(transform, $delay);
+
+    &.pop {
+        transform: scale(1);
+    }
+}
