@@ -116,7 +116,7 @@
             @include box-size(6em);
 
             img {
-                box-shadow: 0px -4px darken(white, 15%);
+                box-shadow: 0px -3px darken(white, 15%);
                 background-color: white;
                 margin-bottom: 1em;
                 margin-left: 1em;
@@ -131,15 +131,16 @@
                 margin-right: 0.5em;
 
                 &:before {
-                    @include border-button-preset(5em, $paper-colors);
+                    @include border-button-preset(5em, $paper-colors, 4px);
                 }
             }
 
             &--scissors {
+                @include absolute-position(0, initial, initial, initial);
                 margin-top: 1em;
 
                 &:before {
-                    @include border-button-preset(5em, $scissors-colors);
+                    @include border-button-preset(5em, $scissors-colors, 4px);
                 }
             }
 
@@ -148,7 +149,7 @@
                 margin-right: 3.5em;
 
                 &:before {
-                    @include border-button-preset(5em, $rock-colors);
+                    @include border-button-preset(5em, $rock-colors, 4px);
                 }
             }
 
@@ -159,7 +160,7 @@
                 margin-left: 2.5em;
 
                 &:before {
-                    @include border-button-preset(5em, $lizard-colors);
+                    @include border-button-preset(5em, $lizard-colors, 4px);
                 }
             }
 
@@ -171,7 +172,7 @@
                 margin-left: 0.5em;
 
                 &:before {
-                    @include border-button-preset(5em, $spock-colors);
+                    @include border-button-preset(5em, $spock-colors, 4px);
                 }
             }
         }

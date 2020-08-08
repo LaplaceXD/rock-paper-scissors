@@ -82,13 +82,13 @@ $spock-colors: (
     }
 }
 
-@mixin border-button-preset($size, $colors) {
+@mixin border-button-preset($size, $colors, $shadow-drop: 6px) {
     content: "";
     border-radius: 50%;
     @include absolute-position(0, 0, initial, initial);
     @include box-size($size);
     transform: $border-button-size;
     background: get-gradient($colors);
-    box-shadow: -1px 6px shade-button($colors, 20%);
+    box-shadow: -1px $shadow-drop shade-button($colors, 20%);
     z-index: -1;
 }
