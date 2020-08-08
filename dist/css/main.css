@@ -680,7 +680,7 @@ footer p a:hover {
     padding: 1em;
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
-    top: 12vh;
+    top: calc(100vh / 2);
     border-radius: 16px;
     -webkit-box-shadow: 2px 4px 8px black;
             box-shadow: 2px 4px 8px black;
@@ -702,6 +702,10 @@ footer p a:hover {
     position: absolute;
     top: 0;
     right: 0.5em;
+  }
+  .settings.active {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .picks {
     margin-top: 40vh;

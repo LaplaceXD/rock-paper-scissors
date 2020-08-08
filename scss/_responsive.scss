@@ -55,12 +55,12 @@
         @include box-size(32em);
         padding: 1em;
         transform: translateY(-200%);
-        top: 12vh;
+        top: calc(100vh / 2);
         border-radius: 16px;
         box-shadow: 2px 4px 8px black;
 
         .rules {
-            h1{
+            h1 {
                 position: absolute;
                 left: 0.5em;
                 top: 0.2em;
@@ -78,6 +78,10 @@
             position: absolute;
             top: 0;
             right: 0.5em;
+        }
+
+        &.active {
+            transform: translateY(-50%);
         }
     }
 
