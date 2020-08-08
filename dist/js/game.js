@@ -154,11 +154,15 @@ async function match() {
     let playerMove = choices[playerDataId];
     playerMoveBtn = getButtonCopy(playerMove);
     playerPick.appendChild(playerMoveBtn);
+    await sleep(100);
+    playerMoveBtn.classList.add("pop");
 
     await sleep(500);
     let houseMove = choices[houseDataId];
     houseMoveBtn = getButtonCopy(houseMove);
     housePick.appendChild(houseMoveBtn);
+    await sleep(300);
+    houseMoveBtn.classList.add("pop");
 
     let status = compareMoves();
     await sleep(500);

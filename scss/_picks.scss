@@ -26,7 +26,7 @@
     }
 
     .btn--placeholder {
-        @extend .gameview__btn;
+        border-radius: 50%;
         @include box-size(11em);
         z-index: -1;
         position: relative;
