@@ -792,6 +792,10 @@ footer p a:hover {
   margin-bottom: 5em;
 }
 
+.picks .btn--placeholder button {
+  margin: none !important;
+}
+
 .picks.active {
   visibility: visible;
   display: -webkit-box;
@@ -891,6 +895,10 @@ footer p a:hover {
     -webkit-box-shadow: 0px -6px #d9d9d9;
             box-shadow: 0px -6px #d9d9d9;
   }
+  .gameview__btn img, .gameview.hard-active .gameview__btn img {
+    margin-top: 0.25em;
+    margin-left: -1em;
+  }
   .gameview__btn--paper::before {
     height: 9em;
     width: 9em;
@@ -908,6 +916,57 @@ footer p a:hover {
     width: 9em;
     -webkit-box-shadow: -1px 8px #9c1c33;
             box-shadow: -1px 8px #9c1c33;
+  }
+  .gameview.hard-active {
+    width: 22em;
+  }
+  .gameview.hard-active .gameview__btn img {
+    padding: 1.25em;
+  }
+  .gameview.hard-active .gameview__btn--paper {
+    margin-top: 6em;
+  }
+  .gameview.hard-active .gameview__btn--paper::before {
+    height: 7em;
+    width: 7em;
+    -webkit-box-shadow: -1px 8px #0d2fd9;
+            box-shadow: -1px 8px #0d2fd9;
+  }
+  .gameview.hard-active .gameview__btn--scissors {
+    margin-top: 0;
+  }
+  .gameview.hard-active .gameview__btn--scissors::before {
+    height: 7em;
+    width: 7em;
+    -webkit-box-shadow: -1px 8px #9b6c0d;
+            box-shadow: -1px 8px #9b6c0d;
+  }
+  .gameview.hard-active .gameview__btn--rock {
+    margin-right: 4.5em;
+  }
+  .gameview.hard-active .gameview__btn--rock::before {
+    height: 7em;
+    width: 7em;
+    -webkit-box-shadow: -1px 8px #9c1c33;
+            box-shadow: -1px 8px #9c1c33;
+  }
+  .gameview.hard-active .gameview__btn--spock {
+    margin-top: 6em;
+  }
+  .gameview.hard-active .gameview__btn--spock::before {
+    height: 7em;
+    width: 7em;
+    -webkit-box-shadow: -1px 8px #288595;
+            box-shadow: -1px 8px #288595;
+  }
+  .gameview.hard-active .gameview__btn--lizard {
+    margin-left: 4.5em;
+  }
+  .gameview.hard-active .gameview__btn--lizard::before {
+    height: 7em;
+    width: 7em;
+    -webkit-box-shadow: -1px 8px #561fbd;
+            box-shadow: -1px 8px #561fbd;
   }
   .btn--settings {
     font-size: 1rem;

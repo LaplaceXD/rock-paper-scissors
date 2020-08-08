@@ -17,7 +17,7 @@
     .gameview {
         margin-top: 1em;
         width: 20em;
-
+        
         &__connector {
             width: 14em;
         }
@@ -26,6 +26,11 @@
             img {
                 @include box-size(110%);
                 box-shadow: 0px -6px darken(white, 15%);
+            }
+
+            img {
+                margin-top: 0.25em;
+                margin-left: -1em;
             }
 
             &--paper::before {
@@ -41,6 +46,60 @@
             &--rock::before {
                 @include box-size(9em);
                 box-shadow: -1px 8px shade-button($rock-colors, 20%);
+            }
+        }
+
+        &.hard-active {
+            width: 22em;
+
+            .gameview__btn {
+                img {
+                    padding: 1.25em;
+                }
+
+                &--paper {
+                    margin-top: 6em;
+
+                    &::before {
+                        @include box-size(7em);
+                        box-shadow: -1px 8px shade-button($paper-colors, 20%);
+                    }
+                }
+
+                &--scissors {
+                    margin-top: 0;
+
+                    &::before {
+                        @include box-size(7em);
+                        box-shadow: -1px 8px shade-button($scissors-colors, 20%);
+                    }
+                }
+
+                &--rock {
+                    margin-right: 4.5em;
+
+                    &::before {
+                        @include box-size(7em);
+                        box-shadow: -1px 8px shade-button($rock-colors, 20%);
+                    }
+                }
+
+                &--spock {
+                    margin-top: 6em;
+
+                    &::before {
+                        @include box-size(7em);
+                        box-shadow: -1px 8px shade-button($spock-colors, 20%);
+                    }
+                }
+
+                &--lizard {
+                    margin-left: 4.5em;
+                    &::before {
+                        @include box-size(7em);
+                        box-shadow: -1px 8px shade-button($lizard-colors, 20%);
+                    }
+                }
             }
         }
     }
