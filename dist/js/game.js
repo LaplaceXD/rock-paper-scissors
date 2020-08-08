@@ -22,6 +22,9 @@ const gameBtns = document.querySelectorAll(".gameview__btn");
 const paper = document.querySelector(".gameview__btn--paper");
 const rock = document.querySelector(".gameview__btn--rock");
 const scissors = document.querySelector(".gameview__btn--scissors");
+const spock = document.querySelector(".gameview__btn--spock");
+const lizard = document.querySelector(".gameview__btn--lizard");
+
 
 const backdropConnector = document.querySelector(".gameview__connector");
 const gameView = document.querySelector(".gameview");
@@ -31,9 +34,11 @@ const housePick = document.querySelector(".picks__house");
 const playerPick = document.querySelector(".picks__player");
 
 const choices = [];
-const paperData = new MoveData("paper", ["rock"], ["scissors"]);
-const rockData = new MoveData("rock", ["scissors"], ["paper"]);
-const scissorsData = new MoveData("scissors", ["paper"], ["rock"]);
+const paperData = new MoveData("paper", ["rock", "spock"], ["scissors", "lizard"]);
+const rockData = new MoveData("rock", ["scissors", "lizard"], ["paper", "spock"]);
+const scissorsData = new MoveData("scissors", ["paper", "lizard"], ["rock", "spock"]);
+const spockData = new MoveData("spock", ["scissors", "rock"], ["paper", "lizard"]);
+const lizardData = new MoveData("lizard", ["spock", "paper"], ["scissors", "rock"]);
 
 let houseDataId = null;
 let houseMoveBtn = null;
