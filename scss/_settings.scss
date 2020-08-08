@@ -1,0 +1,152 @@
+.btn--settings {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 0.75em 2.5em;
+    margin-bottom: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    background: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    z-index: 2;
+    @include transition-ease(color);
+    @include transition-ease(background-color);
+
+    &:hover {
+        color: $score-title;
+        background-color: white;
+    }
+}
+
+.settings {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(-100%);
+    @include transition-ease(transform);
+
+    h1 {
+        color: $dark-text;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    .rules {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+        }
+    }
+
+    .difficulty {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin-right: 2em;
+        }
+
+        &__btn {
+            border: 2px solid $dark-text;
+            color: $dark-text;
+            padding: 0.75em 1.5em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 500ms ease, background-color 500ms ease;
+
+            &--easy {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+
+            &--hard {
+                border-left: none;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $dark-text;
+                color: white;
+            }
+        }
+    }
+
+    .save {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin-right: 2em;
+        }
+
+        &__btn {
+            border: 2px solid $dark-text;
+            color: $dark-text;
+            padding: 0.75em 1.7em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 500ms ease, background-color 500ms ease;
+
+            &--yes {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+
+            &--no {
+                border-left: none;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $dark-text;
+                color: white;
+            }
+        }
+    }
+
+    .reset-score {
+        align-self: stretch;
+        border: 2px solid red;
+        margin: 0 2em;
+        background-color: red;
+        border-radius: 8px;
+        color: white;
+        padding: 0.75em 2em;
+        font-size: 1.25rem;
+        transition: color 500ms ease, background-color 500ms ease;
+
+        &:hover {
+            color: red;
+            background-color: white;
+        }
+    }
+
+    &__close {
+        font-size: 2rem;
+        font-weight: 100;
+        color: gray;
+        cursor: pointer;
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+}

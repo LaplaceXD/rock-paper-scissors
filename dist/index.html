@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- IMPORTANT META TAGS -->
         <link rel="stylesheet" type="text/css" href="./css/main.css" />
-        <script type="module" src="./js/rules.js"></script>
+        <script type="module" src="./js/settings.js"></script>
         <script type="module" src="./js/game.js"></script>
         <title>Rock Paper Scissors</title>
     </head>
@@ -60,12 +60,31 @@
                 <button class="round-over__btn">Play Again</button>
             </section>
 
-            <button class="btn--rules">Rules</button>
+            <button class="btn--settings">Settings</button>
 
-            <section class="rules">
-                <h1>rules</h1>
-                <img src="./images/image-rules.svg" alt="rules" />
-                <span class="rules__close">&Cross;</span>
+            <section class="settings">
+                <div class="rules">
+                    <h1>rules</h1>
+                    <img src="./images/image-rules.svg" alt="rules" />
+                </div>
+                <div class="difficulty">
+                    <h1>difficulty</h1>
+                    <button
+                        class="difficulty__btn difficulty__btn--easy active"
+                    >
+                        Easy
+                    </button>
+                    <button class="difficulty__btn difficulty__btn--hard">
+                        Hard
+                    </button>
+                </div>
+                <div class="save">
+                    <h1>Save Score</h1>
+                    <button class="save__btn save__btn--yes active">Yes</button>
+                    <button class="save__btn save__btn--no">No</button>
+                </div>
+                <button class="reset-score">Reset Score</button>
+                <span class="settings__close">&Cross;</span>
             </section>
         </main>
 

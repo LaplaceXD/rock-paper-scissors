@@ -1,6 +1,6 @@
 .round-over {
     visibility: hidden;
-    display: none;
+    display: flex;
     position: fixed;
     bottom: 0;
     margin-bottom: 10em;
@@ -12,6 +12,7 @@
         color: white;
         font-size: 3rem;
         letter-spacing: 0.2rem;
+        @include pop-transition;
     }
 
     &__btn {
@@ -22,6 +23,8 @@
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-size: 1rem;
+        @include pop-transition(250ms);
+        transition: color 500ms ease, transform 500ms ease;
 
         &:hover {
             color: red;
@@ -30,6 +33,5 @@
 
     &.active {
         visibility: visible;
-        display: flex;
     }
 }

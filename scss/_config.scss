@@ -63,3 +63,22 @@ $paper-colors: (
 @mixin transition-ease($property, $delay: 0ms) {
     transition: $property 500ms $delay ease;
 }
+
+@mixin pop-transition($delay: 0ms) {
+    transform: scale(0);
+    @include transition-ease(transform, $delay);
+
+    &.pop {
+        transform: scale(1);
+    }
+}
+
+@mixin border-button-preset($size, $colors) {
+    content: "";
+    border-radius: 50%;
+    @include box-size($size);
+    transform: $border-button-size;
+    background: get-gradient($colors);
+    box-shadow: -1px 6px shade-button($colors, 20%);
+    z-index: -1;
+}

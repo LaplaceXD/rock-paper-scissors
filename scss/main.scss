@@ -14,9 +14,10 @@ html {
 
 body {
     background: radial-gradient(
-        map-get($background-colors, primary),
-        map-get($background-colors, secondary)
-    ) no-repeat fixed;
+            map-get($background-colors, primary),
+            map-get($background-colors, secondary)
+        )
+        no-repeat fixed;
     font-weight: 600;
     font-family: $primary-font;
 }
@@ -65,13 +66,19 @@ footer {
             text-transform: uppercase;
             color: lighten($score-title, 15%);
             text-decoration: none;
+            transition: color 500ms ease, background-color 500ms ease;
+
+            &:hover {
+                color: darken($dark-text, 20%);
+                background-color: white;
+            }
         }
     }
 }
 
 @import "./header";
 @import "./gameview";
-@import "./rules";
+@import "./settings";
 @import "./picks";
 @import "./round-over";
 @import "./responsive";

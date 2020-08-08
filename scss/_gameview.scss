@@ -6,7 +6,6 @@
 
     &.has-chosen {
         visibility: hidden;
-        display: none;
     }
 
     &__connector {
@@ -27,61 +26,54 @@
     &__btn {
         @include box-size(8em);
         border-radius: 50%;
-        box-shadow: 0px -5px darken(white, 15%);
         cursor: pointer;
+        transform: scale(0);
+        @include transition-ease(transform);
+        transition-timing-function: cubic-bezier(0.11, 0.45, 0.42, 1.6);
+
+        &.pop {
+            transform: scale(1);
+        }
+
+        img {
+            box-shadow: 0px -4px darken(white, 15%);
+            background-color: white;
+            margin-top: 0.2em;
+            margin-left: 0.1em;
+            padding: 2.25em;
+            border-radius: 50%;
+            @include box-size(98%);
+        }
 
         &--paper {
             @include absolute-position(0, initial, initial, 0);
 
-            img {
-                width: 40%;
-            }
-
             &::before {
-                content: "";
-                @extend .gameview__btn;
+                @include border-button-preset(8em, $paper-colors);
                 @include absolute-position(0, initial, initial, 0);
-                z-index: -1;
-                transform: $border-button-size;
-                background: get-gradient($paper-colors);
-                box-shadow: -1px 6px shade-button($paper-colors, 20%);
             }
         }
 
         &--scissors {
             @include absolute-position(0, 0, initial, initial);
-
-            img {
-                width: 40%;
-            }
+            transition-delay: 100ms;
 
             &::before {
-                content: "";
-                @extend .gameview__btn;
+                @include border-button-preset(8em, $scissors-colors);
                 @include absolute-position(0, initial, initial, 0);
-                z-index: -1;
-                transform: $border-button-size;
-                background: get-gradient($scissors-colors);
-                box-shadow: -1px 6px shade-button($scissors-colors, 20%);
             }
         }
 
         &--rock {
             @include absolute-position(initial, initial, 0, initial);
-
-            img {
-                width: 40%;
-            }
+            transition-delay: 200ms;
 
             &::before {
-                content: "";
-                @extend .gameview__btn;
                 @include absolute-position(0, initial, initial, 0);
-                z-index: -1;
-                transform: $border-button-size;
-                background: get-gradient($rock-colors);
-                box-shadow: -1px 6px shade-button($rock-colors, 20%);
+                @include border-button-preset(8em, $rock-colors)
             }
         }
     }
 }
+
+
