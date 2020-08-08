@@ -24,7 +24,7 @@
         letter-spacing: 0.1em;
         font-size: 1rem;
         @include pop-transition(250ms);
-        transition: color 500ms ease, transform 500ms ease;
+        transition: color 500ms 250ms ease, transform 500ms 250ms ease;
 
         &:hover {
             color: red;

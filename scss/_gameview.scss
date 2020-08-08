@@ -47,20 +47,16 @@
 
         &--paper {
             @include absolute-position(0, initial, initial, 0);
+            transition-delay: 100ms;
 
             &::before {
                 @include border-button-preset(8em, $paper-colors);
-                @include absolute-position(0, initial, initial, 0);
             }
         }
 
         &--scissors {
-            @include absolute-position(0, 0, initial, initial);
-            transition-delay: 100ms;
-
             &::before {
                 @include border-button-preset(8em, $scissors-colors);
-                @include absolute-position(0, initial, initial, 0);
             }
         }
 
@@ -69,11 +65,75 @@
             transition-delay: 200ms;
 
             &::before {
-                @include absolute-position(0, initial, initial, 0);
-                @include border-button-preset(8em, $rock-colors)
+                @include border-button-preset(8em, $rock-colors);
+            }
+        }
+
+        &--lizard {
+            display: none;
+            visibility: hidden;
+            transition-delay: 300ms;
+
+            &::before {
+                @include border-button-preset(8em, $lizard-colors);
+            }
+        }
+
+        &--spock {
+            display: none;
+            visibility: hidden;
+            transition-delay: 400ms;
+
+            &::before {
+                @include border-button-preset(8em, $spock-colors);
+            }
+        }
+    }
+
+    &.hard-active {
+        .triangle {
+            display: none;
+        }
+
+        .gameview__btn {
+            @extend .gameview__btn;
+            @include box-size(6em);
+
+            &--paper {
+                &:before {
+                    @include border-button-preset(6em, $paper-colors);
+                }
+            }
+
+            &--scissors {
+                &:before {
+                    @include border-button-preset(6em, $scissors-colors);
+                }
+            }
+
+            &--rock {
+                &:before {
+                    @include border-button-preset(6em, $rock-colors);
+                }
+            }
+
+            &--lizard {
+                display: initial;
+                visibility: visible;
+
+                &:before {
+                    @include border-button-preset(6em, $lizard-colors);
+                }
+            }
+
+            &--spock {
+                display: initial;
+                visibility: visible;
+                
+                &:before {
+                    @include border-button-preset(6em, $spock-colors);
+                }
             }
         }
     }
 }
-
-

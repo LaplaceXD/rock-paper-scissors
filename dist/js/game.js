@@ -9,6 +9,9 @@ function MoveData(name, winsAgainst, losesAgainst) {
     choices.push(name);
 }
 
+const hardBtn = document.querySelector(".difficulty__btn--hard");
+const easyBtn = document.querySelector(".difficulty__btn--easy");
+
 let score = 0;
 const scoreDisplay = document.querySelector(".scoreboard__score");
 const resetScore = document.querySelector(".reset-score");
@@ -20,6 +23,7 @@ const paper = document.querySelector(".gameview__btn--paper");
 const rock = document.querySelector(".gameview__btn--rock");
 const scissors = document.querySelector(".gameview__btn--scissors");
 
+const backdropConnector = document.querySelector(".gameview__connector");
 const gameView = document.querySelector(".gameview");
 const picksView = document.querySelector(".picks");
 
@@ -71,6 +75,7 @@ function initiateRoundOver(roundIsOver) {
 }
 
 document.addEventListener("DOMContentLoaded", loadData);
+
 resetScore.addEventListener("click", function () {
     score = 0;
     localStorage.setItem("score", score);
@@ -164,6 +169,7 @@ function createDecision(status) {
 
     if (localStorage.getItem("save") == "true")
         localStorage.setItem("score", score);
+
     scoreDisplay.textContent = score;
     initiateRoundOver(true);
 }
@@ -180,7 +186,7 @@ async function match() {
     let playerMove = choices[playerDataId];
     playerMoveBtn = getButtonCopy(playerMove);
     playerPick.appendChild(playerMoveBtn);
-    await sleep(100);
+    await sleep(50);
     playerMoveBtn.classList.add("pop");
 
     await sleep(500);
