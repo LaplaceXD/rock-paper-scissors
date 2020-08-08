@@ -41,8 +41,7 @@ const roundOverBtn = document.querySelector(".round-over__btn");
 
 function loadDataIds() {
     scoreDisplay.textContent = score;
-    for(let btn of gameBtns)
-        btn.classList.add("pop");
+    for (let btn of gameBtns) btn.classList.add("pop");
 
     paper.setAttribute("data-id", choices.indexOf("paper"));
     rock.setAttribute("data-id", choices.indexOf("rock"));
@@ -50,12 +49,12 @@ function loadDataIds() {
 }
 
 function initiateRoundOver(roundIsOver) {
-    if(roundIsOver) {
-        roundOver.classList.add("active")
+    if (roundIsOver) {
+        roundOver.classList.add("active");
         roundOverStatus.classList.add("pop");
         roundOverBtn.classList.add("pop");
     } else {
-        roundOver.classList.remove("active")
+        roundOver.classList.remove("active");
         roundOverStatus.classList.remove("pop");
         roundOverBtn.classList.remove("pop");
     }
@@ -65,6 +64,7 @@ document.addEventListener("DOMContentLoaded", loadDataIds);
 
 function restartGame() {
     initiateRoundOver(false);
+    for (let btn of gameBtns) btn.classList.add("pop");
 
     gameView.classList.remove("has-chosen");
     picksView.classList.remove("active");
@@ -145,6 +145,9 @@ async function match() {
     houseDataId = Math.floor(Math.random() * choices.length);
     playerDataId = this.getAttribute("data-id");
 
+    for(let btn of gameBtns)
+        btn.classList.remove("pop");
+    await sleep(200);
     gameView.classList.add("has-chosen");
     picksView.classList.add("active");
 
