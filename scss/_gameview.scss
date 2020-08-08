@@ -6,6 +6,9 @@
 
     &.has-chosen {
         visibility: hidden;
+        .pentagon {
+            visibility: hidden !important;
+        }
     }
 
     &__connector {

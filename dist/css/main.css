@@ -187,6 +187,10 @@ footer p a:hover {
   visibility: hidden;
 }
 
+.gameview.has-chosen .pentagon {
+  visibility: hidden !important;
+}
+
 .gameview__connector {
   position: relative;
   z-index: -2;
