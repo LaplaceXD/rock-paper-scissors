@@ -175,7 +175,15 @@
 
         .btn--placeholder {
             @include box-size(12.5em);
+            padding-left: 1.5em;
+            padding-bottom: 1em;
             box-shadow: none;
+
+            &.picks__player.won,
+            &.picks__house.won {
+                box-shadow: 0 0 0px 80px rgba(white, 0.15),
+                    0 0 0px 172px rgba(white, 0.1), 0 0 0px 320px rgba(white, 0.05);
+            }
         }
     }
 
@@ -341,11 +349,21 @@
         }
 
         .btn--placeholder {
-            @include box-size(15em);
+            @include box-size(17em);
             box-shadow: none;
             order: 1;
             margin-bottom: 0;
             margin-top: 12em;
+
+            button img {
+                padding: 2.5em;
+            }
+
+            &.picks__player.won,
+            &.picks__house.won {
+                box-shadow: 0 0 0px 128px rgba(white, 0.15),
+                    0 0 0px 320px rgba(white, 0.1), 0 0 0px 640px rgba(white, 0.05);
+            }
         }
     }
 

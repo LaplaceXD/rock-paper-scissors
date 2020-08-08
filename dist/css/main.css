@@ -824,12 +824,13 @@ footer p a:hover {
 }
 
 .picks .btn--placeholder button {
-  margin: none !important;
+  margin: 0 0 1em 0 !important;
+  position: relative !important;
 }
 
 .picks .btn--placeholder.picks__player.won, .picks .btn--placeholder.picks__house.won {
-  -webkit-box-shadow: 0 0 0px 32px rgba(255, 255, 255, 0.15), 0 0 0px 64px rgba(255, 255, 255, 0.1), 0 0 0px 128px rgba(255, 255, 255, 0.05);
-          box-shadow: 0 0 0px 32px rgba(255, 255, 255, 0.15), 0 0 0px 64px rgba(255, 255, 255, 0.1), 0 0 0px 128px rgba(255, 255, 255, 0.05);
+  -webkit-box-shadow: 0 0 0px 48px rgba(255, 255, 255, 0.15), 0 0 0px 92px rgba(255, 255, 255, 0.1), 0 0 0px 160px rgba(255, 255, 255, 0.05);
+          box-shadow: 0 0 0px 48px rgba(255, 255, 255, 0.15), 0 0 0px 92px rgba(255, 255, 255, 0.1), 0 0 0px 160px rgba(255, 255, 255, 0.05);
 }
 
 .picks.active {
@@ -1074,8 +1075,14 @@ footer p a:hover {
   .picks .btn--placeholder {
     height: 12.5em;
     width: 12.5em;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .picks .btn--placeholder.picks__player.won, .picks .btn--placeholder.picks__house.won {
+    -webkit-box-shadow: 0 0 0px 80px rgba(255, 255, 255, 0.15), 0 0 0px 172px rgba(255, 255, 255, 0.1), 0 0 0px 320px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0px 80px rgba(255, 255, 255, 0.15), 0 0 0px 172px rgba(255, 255, 255, 0.1), 0 0 0px 320px rgba(255, 255, 255, 0.05);
   }
   .round-over {
     margin-bottom: 42vh;
@@ -1227,8 +1234,8 @@ footer p a:hover {
     font-size: 1.25rem;
   }
   .picks .btn--placeholder {
-    height: 15em;
-    width: 15em;
+    height: 17em;
+    width: 17em;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-box-ordinal-group: 2;
@@ -1236,6 +1243,13 @@ footer p a:hover {
             order: 1;
     margin-bottom: 0;
     margin-top: 12em;
+  }
+  .picks .btn--placeholder button img {
+    padding: 2.5em;
+  }
+  .picks .btn--placeholder.picks__player.won, .picks .btn--placeholder.picks__house.won {
+    -webkit-box-shadow: 0 0 0px 128px rgba(255, 255, 255, 0.15), 0 0 0px 320px rgba(255, 255, 255, 0.1), 0 0 0px 640px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0px 128px rgba(255, 255, 255, 0.15), 0 0 0px 320px rgba(255, 255, 255, 0.1), 0 0 0px 640px rgba(255, 255, 255, 0.05);
   }
   .round-over {
     margin-bottom: 33vh;

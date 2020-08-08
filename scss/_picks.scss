@@ -37,13 +37,14 @@
         @include transition-ease(box-shadow);
 
         button {
-            margin: none !important;
+            margin: 0 0 1em 0 !important;
+            position: relative !important;
         }
 
         &.picks__player.won,
         &.picks__house.won {
-            box-shadow: 0 0 0px 32px rgba(white, 0.15),
-                0 0 0px 64px rgba(white, 0.1), 0 0 0px 128px rgba(white, 0.05);
+            box-shadow: 0 0 0px 48px rgba(white, 0.15),
+                0 0 0px 92px rgba(white, 0.1), 0 0 0px 160px rgba(white, 0.05);
         }
     }
 
