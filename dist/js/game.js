@@ -2,13 +2,12 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function MoveData(name, winsAgainst, losesAgainst) {
-    this.name = name;
+function MoveData(winsAgainst, losesAgainst) {
     this.winsAgainst = [...winsAgainst];
     this.losesAgainst = [...losesAgainst];
-    choices.push(name);
 }
 
+let hardMode = true;
 const hardBtn = document.querySelector(".difficulty__btn--hard");
 const easyBtn = document.querySelector(".difficulty__btn--easy");
 const hardRules = document.querySelector(".rules__hard");
@@ -35,32 +34,13 @@ const picksView = document.querySelector(".picks");
 const housePick = document.querySelector(".picks__house");
 const playerPick = document.querySelector(".picks__player");
 
-const choices = [];
-const paperData = new MoveData(
-    "paper",
-    ["rock", "spock"],
-    ["scissors", "lizard"]
-);
-const rockData = new MoveData(
-    "rock",
-    ["scissors", "lizard"],
-    ["paper", "spock"]
-);
-const scissorsData = new MoveData(
-    "scissors",
-    ["paper", "lizard"],
-    ["rock", "spock"]
-);
-const spockData = new MoveData(
-    "spock",
-    ["scissors", "rock"],
-    ["paper", "lizard"]
-);
-const lizardData = new MoveData(
-    "lizard",
-    ["spock", "paper"],
-    ["scissors", "rock"]
-);
+const easyChoices = ["rock", "paper", "scissors"];
+const choices = [...easyChoices, "spock", "lizard"];
+const paperData = new MoveData(["rock", "spock"], ["scissors", "lizard"]);
+const rockData = new MoveData(["scissors", "lizard"], ["paper", "spock"]);
+const scissorsData = new MoveData(["paper", "lizard"], ["rock", "spock"]);
+const spockData = new MoveData(["scissors", "rock"], ["paper", "lizard"]);
+const lizardData = new MoveData(["spock", "paper"], ["scissors", "rock"]);
 
 let houseDataId = null;
 let houseMoveBtn = null;
@@ -116,6 +96,8 @@ easyBtn.addEventListener("click", function () {
     hardBtn.classList.remove("active");
     easyRules.classList.add("active");
     hardRules.classList.remove("active");
+
+    hardMode = false;
 });
 
 hardBtn.addEventListener("click", function () {
@@ -125,6 +107,8 @@ hardBtn.addEventListener("click", function () {
     hardBtn.classList.add("active");
     hardRules.classList.add("active");
     easyRules.classList.remove("active");
+
+    hardMode = true;
 });
 
 resetScore.addEventListener("click", function () {
@@ -246,7 +230,9 @@ async function match() {
         gameBtns[i].removeEventListener("click", match);
     }
 
-    houseDataId = Math.floor(Math.random() * choices.length);
+    if (hardMode) houseDataId = Math.floor(Math.random() * choices.length);
+    else houseDataId = Math.floor(Math.random() * easyChoices.length);
+
     playerDataId = this.getAttribute("data-id");
 
     for (let btn of gameBtns) btn.classList.remove("pop");
