@@ -2,4 +2,4 @@ dist/js/*.js linguist-vendored=false
 scss/*.scss linguist-vendored=false
 dist/*.html linguist-vendored=false
 
-dist/css/*.css linguist-detectable=false
+dist/css/*.css linguist-vendored=true
